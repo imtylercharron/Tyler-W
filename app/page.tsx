@@ -1,17 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import {
-  MapPin,
-  Calendar,
-  Clock,
-  Award,
-  Wrench,
-  MessageSquare,
-  Mail,
-  GraduationCap,
-  Briefcase,
-  Code2,
-  Globe,
-} from "lucide-react";
+import { useEffect, useState } from "react";
+import { Mail, Link as LinkIcon, Search } from "lucide-react";
 
 function LinkedInIcon({ size = 18 }: { size?: number }) {
   return (
@@ -20,257 +11,105 @@ function LinkedInIcon({ size = 18 }: { size?: number }) {
     </svg>
   );
 }
-import { profile } from "@/lib/data";
 import s from "./page.module.css";
+import { profile } from "@/lib/data";
 
 export default function Home() {
+  const [displayText, setDisplayText] = useState("");
+  const fullName = "T|";
+  const targetText = "TYLER CHARRON|";
+  
+  useEffect(() => {
+    let currentIndex = 1;
+    const intervalId = setInterval(() => {
+      if (currentIndex <= targetText.length - 1) {
+        setDisplayText(targetText.slice(0, currentIndex) + "|");
+        currentIndex++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 150);
+    
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <>
-      {/* ── NAVBAR ── */}
       <nav className={s.nav}>
-        <div className={s.navInner}>
-          <a href="#" className={s.navLogo}>
-            Tyler <span>Charron</span>
-          </a>
-          <div className={s.navLinks}>
-            <a href="#experience" className={s.navLink}>Experience</a>
-            <a href="#education" className={s.navLink}>Education</a>
-            <a href="#skills" className={s.navLink}>Skills</a>
-            <a href="#contact" className={s.navLink}>Contact</a>
-          </div>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className={s.navCta}>
-            LinkedIn ↗
-          </a>
+        <a href="#" className={s.navLogo}>
+          tylercharron.com
+        </a>
+        <div className={s.navLinks}>
+          <a href="#" className={s.navLink}>Home</a>
+          <a href="#projects" className={s.navLink}>Projects ⌄</a>
+          <a href="#contact" className={s.navLink}>Contact</a>
+          <a href="#about" className={s.navLink}>About Me</a>
+          <a href="#" className={s.navLink} style={{ display: 'flex', alignItems: 'center' }}><Search size={18} /></a>
         </div>
       </nav>
 
-      {/* ── HERO ── */}
       <section className={s.hero}>
+        <Image
+          src="/earth.png"
+          alt="Earth Background"
+          fill
+          className={s.heroBg}
+          priority
+        />
         <div className={s.heroContent}>
-          <div className={s.heroLeft}>
-            <div className={s.heroBadge}>
-              <div className={s.heroBadgeDot} />
-              Open to Opportunities
-            </div>
-
-            <h1 className={s.heroName}>
-              Tyler<br /><span>Charron</span>
-            </h1>
-
-            <p className={s.heroTitle}>
-              {profile.headline} · {profile.subheadline}
-            </p>
-
-            <p className={s.heroAbout}>{profile.about}</p>
-
-            <div className={s.heroActions}>
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={s.btnPrimary}
-                id="hero-linkedin-btn"
-              >
-                <LinkedInIcon size={17} />
-                Connect on LinkedIn
-              </a>
-              <a href="#contact" className={s.btnSecondary} id="hero-contact-btn">
-                <Mail size={17} />
-                Get in Touch
-              </a>
-            </div>
-          </div>
-
-          <div className={s.heroRight}>
-            <div className={s.avatarWrap}>
-              <div className={s.avatarRing} />
-              <Image
-                src="/avatar.png"
-                alt="Tyler Charron"
-                width={340}
-                height={340}
-                className={s.avatarImg}
-                priority
-              />
-              <div className={s.avatarCard}>
-                📍 Ottawa, Ontario
-                <span>University of Ottawa</span>
-              </div>
-            </div>
+          <div className={s.heroNameWrapper}>
+            <h1 className={s.heroName}>{displayText || "T|"}</h1>
           </div>
         </div>
       </section>
 
-      {/* ── STATS ── */}
-      <div className={s.statsRow}>
-        {profile.stats.map((stat) => (
-          <div key={stat.label} className={s.statCard}>
-            <div className={s.statValue}>{stat.value}</div>
-            <div className={s.statLabel}>{stat.label}</div>
-          </div>
-        ))}
-      </div>
+      <section className={s.intro}>
+        <p className={s.introText}>
+          Welcome to my digital space, where I dive into my engineering discoveries.
+        </p>
+      </section>
 
-      {/* ── EXPERIENCE ── */}
-      <section className={s.section} id="experience">
-        <div className={s.sectionHeader}>
-          <div className={s.sectionTag}><Briefcase size={13} /> Experience</div>
-          <h2 className={s.sectionTitle}>Work History</h2>
-        </div>
-
-        <div className={s.expGrid}>
-          {profile.experience.map((exp) => (
-            <div key={exp.id} className={s.expCard}>
-              <div className={s.expLogo}>{exp.logo}</div>
-              <div className={s.expBody}>
-                <div className={s.expTitle}>{exp.title}</div>
-                <div className={s.expCompany}>{exp.company}</div>
-                <div className={s.expMeta}>
-                  <span className={s.expMetaItem}>
-                    <Calendar size={12} /> {exp.period}
-                  </span>
-                  <span className={s.expMetaItem}>
-                    <MapPin size={12} /> {exp.location}
-                  </span>
-                </div>
-                <p className={s.expDesc}>{exp.description}</p>
+      <section className={s.gridSection} id="projects">
+        <div className={s.grid}>
+          {profile.experience.map((exp, i) => (
+            <a href="#" key={`exp-${i}`} className={s.gridCard}>
+              <div className={s.gridImageWrap}>
+                <div style={{ width: '100%', height: '100%', background: '#222' }} className={s.gridImage}></div>
               </div>
-              <div className={s.expDuration}>
-                <Clock size={11} style={{ display: "inline", marginRight: 4 }} />
-                {exp.duration}
+              <div className={s.gridTitle}>{exp.title}</div>
+            </a>
+          ))}
+          {profile.education.map((edu, i) => (
+             <a href="#" key={`edu-${i}`} className={s.gridCard}>
+              <div className={s.gridImageWrap}>
+                <div style={{ width: '100%', height: '100%', background: '#222' }} className={s.gridImage}></div>
               </div>
-            </div>
+              <div className={s.gridTitle}>{edu.degree}</div>
+            </a>
           ))}
         </div>
       </section>
 
-      <div className={s.divider} />
-
-      {/* ── EDUCATION ── */}
-      <section className={s.section} id="education">
-        <div className={s.sectionHeader}>
-          <div className={s.sectionTag}><GraduationCap size={13} /> Education</div>
-          <h2 className={s.sectionTitle}>Academic Background</h2>
-        </div>
-
-        {profile.education.map((edu) => (
-          <div key={edu.id} className={s.eduCard}>
-            <div className={s.eduLogo}>{edu.logo}</div>
-            <div>
-              <div className={s.eduSchool}>{edu.school}</div>
-              <div className={s.eduDegree}>{edu.degree}</div>
-              <div className={s.eduMeta}>
-                <span className={s.eduMetaItem}><Calendar size={12} /> {edu.period}</span>
-                <span className={s.eduMetaItem}><MapPin size={12} /> {edu.location}</span>
-              </div>
-              <div className={s.eduDetails}>{edu.details}</div>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      <div className={s.divider} />
-
-      {/* ── SKILLS ── */}
-      <section className={s.section} id="skills">
-        <div className={s.sectionHeader}>
-          <div className={s.sectionTag}><Code2 size={13} /> Skills</div>
-          <h2 className={s.sectionTitle}>Expertise & Tools</h2>
-        </div>
-
-        <div className={s.skillsGrid}>
-          <div className={s.skillsCard}>
-            <div className={s.skillsCardTitle}>
-              <Wrench size={15} /> Engineering & Software
-            </div>
-            <div className={s.skillTags}>
-              {profile.skills.engineering.map((skill) => (
-                <span key={skill} className={s.skillTag}>{skill}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className={s.skillsCard}>
-            <div className={s.skillsCardTitle}>
-              <MessageSquare size={15} /> Professional Skills
-            </div>
-            <div className={s.skillTags}>
-              {profile.skills.soft.map((skill) => (
-                <span key={skill} className={s.skillTag}>{skill}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className={s.skillsCard}>
-            <div className={s.skillsCardTitle}>
-              <Globe size={15} /> Languages
-            </div>
-            <div className={s.skillTags}>
-              {profile.skills.languages.map((lang) => (
-                <span key={lang} className={s.skillTag}>{lang}</span>
-              ))}
-            </div>
+      <section className={s.quickLinksSection}>
+        <div className={s.quickLinksContainer}>
+          <h2 className={s.quickLinksTitle}>Quick<br />Links</h2>
+          <div className={s.quickLinksList}>
+            <a href="#projects" className={s.quickLink}>&gt; PROJECTS</a>
+            <a href="#about" className={s.quickLink}>&gt; ABOUT ME</a>
+            <a href="#contact" className={s.quickLink}>&gt; CONTACT</a>
           </div>
         </div>
       </section>
 
-      <div className={s.divider} />
-
-      {/* ── CERTIFICATIONS ── */}
-      <section className={s.section}>
-        <div className={s.sectionHeader}>
-          <div className={s.sectionTag}><Award size={13} /> Certifications</div>
-          <h2 className={s.sectionTitle}>Credentials</h2>
+      <footer className={s.footer} id="contact">
+        <div className={s.footerLinks}>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><LinkedInIcon size={20} /></a>
+          <a href={`mailto:${profile.email}`}><Mail size={20} /></a>
+          <a href="#"><LinkIcon size={20} /></a>
         </div>
-
-        <div className={s.certsGrid}>
-          {profile.certifications.map((cert) => (
-            <div key={cert.name} className={s.certCard}>
-              <div className={s.certIcon}><Award size={20} /></div>
-              <div>
-                <div className={s.certName}>{cert.name}</div>
-                <div className={s.certMeta}>{cert.issuer} · {cert.year}</div>
-              </div>
-            </div>
-          ))}
+        <div>
+          Copyright © {new Date().getFullYear()} Tyler Charron. All Rights Reserved
         </div>
-      </section>
-
-      <div className={s.divider} />
-
-      {/* ── CONTACT ── */}
-      <section className={s.section} id="contact">
-        <div className={s.contactWrap}>
-          <h2 className={s.contactTitle}>
-            Let&apos;s <span>Connect</span>
-          </h2>
-          <p className={s.contactSub}>
-            I&apos;m always open to new opportunities, collaborations, and conversations about engineering and innovation.
-          </p>
-          <div className={s.contactLinks}>
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${s.contactLink} ${s.contactLinkPrimary}`}
-              id="contact-linkedin-btn"
-            >
-              <LinkedInIcon size={18} /> View LinkedIn Profile
-            </a>
-            <a
-              href={`mailto:${profile.email}`}
-              className={`${s.contactLink} ${s.contactLinkSecondary}`}
-              id="contact-email-btn"
-            >
-              <Mail size={18} /> Send an Email
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FOOTER ── */}
-      <footer className={s.footer}>
-        <p>© {new Date().getFullYear()} Tyler Charron · Built with Next.js & React</p>
       </footer>
     </>
   );
