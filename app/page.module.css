@@ -27,7 +27,7 @@
 
 .navLink {
   font-size: 0.9rem;
-  color: white;
+  color: var(--text-primary);
   letter-spacing: 0.05em;
   font-weight: 500;
 }
@@ -75,14 +75,14 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   display: inline-block;
-  border-right: 2px solid white;
+  border-right: 2px solid var(--text-primary);
   padding-right: 0.1em;
   animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
   0%, 100% { border-color: transparent; }
-  50% { border-color: white; }
+  50% { border-color: var(--text-primary); }
 }
 
 /* Introduction */
@@ -116,7 +116,7 @@
 
 .gridCard {
   position: relative;
-  background: #111;
+  background: var(--bg-secondary);
   overflow: hidden;
   display: block;
   border: 1px solid var(--border-color);
@@ -184,7 +184,7 @@
 }
 
 .quickLink:hover {
-  color: white;
+  color: var(--text-primary);
 }
 
 /* Footer */
@@ -206,7 +206,7 @@
 }
 
 .footerLinks a {
-  color: white;
+  color: var(--text-primary);
 }
 
 /* Responsive */

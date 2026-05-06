@@ -74,7 +74,7 @@ export default function Home() {
           {profile.experience.map((exp, i) => (
             <a href="#" key={`exp-${i}`} className={s.gridCard}>
               <div className={s.gridImageWrap}>
-                <div style={{ width: '100%', height: '100%', background: '#222' }} className={s.gridImage}></div>
+                <div style={{ width: '100%', height: '100%', background: 'var(--bg-secondary)' }} className={s.gridImage}></div>
               </div>
               <div className={s.gridTitle}>{exp.title}</div>
             </a>
@@ -82,7 +82,7 @@ export default function Home() {
           {profile.education.map((edu, i) => (
              <a href="#" key={`edu-${i}`} className={s.gridCard}>
               <div className={s.gridImageWrap}>
-                <div style={{ width: '100%', height: '100%', background: '#222' }} className={s.gridImage}></div>
+                <div style={{ width: '100%', height: '100%', background: 'var(--bg-secondary)' }} className={s.gridImage}></div>
               </div>
               <div className={s.gridTitle}>{edu.degree}</div>
             </a>
