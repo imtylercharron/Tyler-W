@@ -71,16 +71,19 @@
 }
 
 .heroName {
-  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
-  font-size: 4rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 6.5rem;
   font-style: normal;
-  font-weight: bold;
-  letter-spacing: 0.1em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   display: inline-block;
   border-right: 2px solid var(--text-primary);
   padding-right: 0.1em;
   animation: blink 1s step-end infinite;
-  text-shadow: 0 0 10px rgba(128, 203, 196, 0.3);
+  background: linear-gradient(90deg, #ffc8c8 0%, #f5e6e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @keyframes blink {
