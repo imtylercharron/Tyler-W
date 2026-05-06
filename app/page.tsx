@@ -16,14 +16,13 @@ import { profile } from "@/lib/data";
 
 export default function Home() {
   const [displayText, setDisplayText] = useState("");
-  const fullName = "T|";
-  const targetText = "TYLER CHARRON|";
+  const targetText = "TYLER CHARRON";
   
   useEffect(() => {
     let currentIndex = 1;
     const intervalId = setInterval(() => {
-      if (currentIndex <= targetText.length - 1) {
-        setDisplayText(targetText.slice(0, currentIndex) + "|");
+      if (currentIndex <= targetText.length) {
+        setDisplayText(targetText.slice(0, currentIndex));
         currentIndex++;
       } else {
         clearInterval(intervalId);
@@ -58,7 +57,7 @@ export default function Home() {
         />
         <div className={s.heroContent}>
           <div className={s.heroNameWrapper}>
-            <h1 className={s.heroName}>{displayText || "T|"}</h1>
+            <h1 className={s.heroName}>{displayText || "T"}</h1>
           </div>
         </div>
       </section>
