@@ -50,8 +50,8 @@ export default function Home() {
 
       <section className={s.hero}>
         <Image
-          src="/rocket_cotton_candy_sky.png"
-          alt="Rocket Cotton Candy Sky Background"
+          src="/plane_cotton_candy.png"
+          alt="Plane Cotton Candy Background"
           fill
           className={s.heroBg}
           priority
