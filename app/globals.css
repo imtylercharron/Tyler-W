@@ -5,12 +5,12 @@
 }
 
 :root {
-  --bg-primary: #041a0f;
-  --bg-secondary: #0a2e1b;
-  --text-primary: #eaf5ef;
-  --text-secondary: #9ac4aa;
-  --text-muted: #6b967e;
-  --border-color: rgba(154, 196, 170, 0.2);
+  --bg-primary: #000000;
+  --bg-secondary: #050a05;
+  --text-primary: #00ff41;
+  --text-secondary: #00b32c;
+  --text-muted: #004d13;
+  --border-color: rgba(0, 255, 65, 0.2);
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .serif-text {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
 }
 
 a {
@@ -41,7 +41,7 @@ a:hover {
 }
 
 ::selection {
-  background: rgba(154, 196, 170, 0.3);
+  background: rgba(0, 255, 65, 0.3);
 }
 
 ::-webkit-scrollbar { width: 8px; }

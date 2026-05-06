@@ -12,9 +12,10 @@
 }
 
 .navLogo {
-  font-family: var(--font-playfair);
-  font-size: 1.8rem;
-  font-style: italic;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -49,8 +50,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: left center;
+  background: linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
   z-index: 0;
 }
 
@@ -61,23 +63,24 @@
   width: 100%;
   padding: 0 4rem;
   display: flex;
-  justify-content: flex-end; /* Or wherever you want the text to be placed relative to the earth image */
+  justify-content: center;
 }
 
 .heroNameWrapper {
-  margin-right: 15%; /* Adjust this to move it away from the earth */
+  margin-right: 0;
 }
 
 .heroName {
-  font-family: var(--font-playfair);
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
   font-size: 4rem;
   font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
   display: inline-block;
   border-right: 2px solid var(--text-primary);
   padding-right: 0.1em;
   animation: blink 1s step-end infinite;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
 
 @keyframes blink {
@@ -94,9 +97,9 @@
 }
 
 .introText {
-  font-family: var(--font-playfair);
-  font-size: 2.5rem;
-  font-style: italic;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-size: 2rem;
+  font-style: normal;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -133,13 +136,18 @@
   transition: transform 0.5s ease;
 }
 
+.gridCard:hover {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
 .gridCard:hover .gridImage {
   transform: scale(1.05);
 }
 
 .gridTitle {
   padding: 1.5rem;
-  font-family: var(--font-inter);
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -163,9 +171,9 @@
 }
 
 .quickLinksTitle {
-  font-family: var(--font-playfair);
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -176,15 +184,17 @@
 }
 
 .quickLink {
-  font-family: var(--font-inter);
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-secondary);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .quickLink:hover {
   color: var(--text-primary);
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
 }
 
 /* Footer */

@@ -37,7 +37,7 @@ export default function Home() {
     <>
       <nav className={s.nav}>
         <a href="#" className={s.navLogo}>
-          tylercharron.com
+          &gt; tyler_charron
         </a>
         <div className={s.navLinks}>
           <a href="#" className={s.navLink}>Home</a>
@@ -49,13 +49,7 @@ export default function Home() {
       </nav>
 
       <section className={s.hero}>
-        <Image
-          src="/earth.png"
-          alt="Earth Background"
-          fill
-          className={s.heroBg}
-          priority
-        />
+        <div className={s.heroBg} />
         <div className={s.heroContent}>
           <div className={s.heroNameWrapper}>
             <h1 className={s.heroName}>{displayText || "T|"}</h1>
