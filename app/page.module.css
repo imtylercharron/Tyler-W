@@ -57,17 +57,13 @@
 }
 
 .heroContent {
-  position: absolute;
-  top: 14.5%;
-  left: 22.3%;
-  width: 55.4%;
-  height: 66%;
+  position: relative;
   z-index: 1;
   text-align: center;
-  padding: 0;
+  width: 100%;
+  padding: 0 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .heroNameWrapper {
