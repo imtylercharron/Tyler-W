@@ -17,6 +17,13 @@ import { profile } from "@/lib/data";
 export default function Home() {
   const [displayText, setDisplayText] = useState("");
   const targetText = "TYLER CHARRON";
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   
   useEffect(() => {
     let currentIndex = 1;
@@ -53,6 +60,7 @@ export default function Home() {
           alt="Plane Background"
           fill
           className={s.heroBg}
+          style={{ transform: `translateY(${scrollY * 0.4}px)` }}
           priority
         />
         <div className={s.heroContent}>
