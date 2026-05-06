@@ -49,7 +49,13 @@ export default function Home() {
       </nav>
 
       <section className={s.hero}>
-        <div className={s.heroBg} />
+        <Image
+          src="/green_planet_bg.png"
+          alt="Green Planet Background"
+          fill
+          className={s.heroBg}
+          priority
+        />
         <div className={s.heroContent}>
           <div className={s.heroNameWrapper}>
             <h1 className={s.heroName}>{displayText || "T|"}</h1>
