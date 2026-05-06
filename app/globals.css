@@ -5,12 +5,12 @@
 }
 
 :root {
-  --bg-primary: #010a05;
-  --bg-secondary: #05160a;
-  --text-primary: #e0f2e5;
-  --text-secondary: #8bc29e;
-  --text-muted: #538064;
-  --border-color: rgba(139, 194, 158, 0.2);
+  --bg-primary: #0f0b1a;
+  --bg-secondary: #1a122e;
+  --text-primary: #fae6fa;
+  --text-secondary: #ff99e6;
+  --text-muted: #cc99ff;
+  --border-color: rgba(255, 153, 230, 0.2);
 }
 
 html {
@@ -41,7 +41,7 @@ a:hover {
 }
 
 ::selection {
-  background: rgba(139, 194, 158, 0.3);
+  background: rgba(255, 153, 230, 0.3);
 }
 
 ::-webkit-scrollbar { width: 8px; }

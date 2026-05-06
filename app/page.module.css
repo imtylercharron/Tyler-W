@@ -80,7 +80,7 @@
   border-right: 2px solid var(--text-primary);
   padding-right: 0.1em;
   animation: blink 1s step-end infinite;
-  text-shadow: 0 0 10px rgba(139, 194, 158, 0.3);
+  text-shadow: 0 0 10px rgba(255, 153, 230, 0.3);
 }
 
 @keyframes blink {
@@ -138,7 +138,7 @@
 
 .gridCard:hover {
   border-color: var(--text-primary);
-  box-shadow: 0 0 15px rgba(139, 194, 158, 0.2);
+  box-shadow: 0 0 15px rgba(255, 153, 230, 0.2);
 }
 
 .gridCard:hover .gridImage {
@@ -194,7 +194,7 @@
 
 .quickLink:hover {
   color: var(--text-primary);
-  text-shadow: 0 0 8px rgba(139, 194, 158, 0.4);
+  text-shadow: 0 0 8px rgba(255, 153, 230, 0.4);
 }
 
 /* Footer */
