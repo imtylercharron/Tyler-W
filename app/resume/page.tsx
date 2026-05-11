@@ -7,7 +7,7 @@ import { Download } from "lucide-react";
 
 export default function ResumePage() {
   // Path to the resume file in the public folder
-  const resumePath = "/resume.pdf";
+  const resumePath = "/Tyler%20Charron's%20Resume.pdf";
 
   return (
     <main className={s.main}>
@@ -16,14 +16,11 @@ export default function ResumePage() {
       <div className={s.container}>
         <header className={s.header}>
           <h1 className={s.title}>Resume</h1>
-          <p className={s.instructions}>
-            Place your actual resume PDF in the <code style={{background: 'rgba(0,0,0,0.05)', padding: '2px 6px', borderRadius: '4px'}}>public/</code> folder and name it <code style={{background: 'rgba(0,0,0,0.05)', padding: '2px 6px', borderRadius: '4px'}}>resume.pdf</code> to display it here.
-          </p>
         </header>
 
         <div className={s.resumeContainer}>
           <iframe 
-            src={`${resumePath}#view=FitH`} 
+            src={`${resumePath}#view=FitH&toolbar=0&navpanes=0`} 
             className={s.pdfViewer} 
             title="Tyler Charron Resume"
           />
