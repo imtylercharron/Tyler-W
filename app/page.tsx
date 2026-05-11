@@ -35,9 +35,10 @@ export default function Home() {
 
   return (
     <>
+      <div id="home" style={{ position: 'absolute', top: 0, left: 0 }} />
       <Navbar />
 
-      <section className={s.hero} id="home">
+      <section className={s.hero}>
         <Image
           src="/59d4227b-3f1b-45ea-91ef-12900193042d.png"
           alt="Plane Background"
@@ -70,7 +71,7 @@ export default function Home() {
           </div>
           <div className={s.footerIcons}>
             <a href="https://www.linkedin.com/in/tylercharron/" target="_blank" rel="noopener noreferrer"><LinkedInIcon size={24} /></a>
-            <a href="mailto:imtylercharron@gmail.com" target="_blank" rel="noopener noreferrer"><Mail size={24} /></a>
+            <a href="mailto:imtylercharron@gmail.com"><Mail size={24} /></a>
           </div>
         </footer>
       </div>
