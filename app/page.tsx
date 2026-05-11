@@ -17,13 +17,6 @@ import { profile } from "@/lib/data";
 export default function Home() {
   const [displayText, setDisplayText] = useState("");
   const targetText = "TYLER CHARRON";
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   
   useEffect(() => {
     let currentIndex = 1;
@@ -60,7 +53,6 @@ export default function Home() {
           alt="Plane Background"
           fill
           className={s.heroBg}
-          style={{ transform: `translateY(${scrollY * 0.4}px)` }}
           priority
         />
         <div className={s.heroContent}>
@@ -70,7 +62,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={s.intro}>
+      <div className={s.contentWrapper}>
+        <section className={s.intro}>
         <p className={s.introText}>
           Welcome to my digital space, where I dive into my engineering discoveries.
         </p>
@@ -118,6 +111,7 @@ export default function Home() {
           Copyright © {new Date().getFullYear()} Tyler Charron. All Rights Reserved
         </div>
       </footer>
+      </div>
     </>
   );
 }
