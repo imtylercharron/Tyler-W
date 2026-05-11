@@ -49,9 +49,6 @@ export default function Home() {
           <div className={s.heroNameWrapper}>
             <h1 className={s.heroName}>{displayText || "T"}</h1>
           </div>
-          <p className={s.heroAboutText} id="about">
-            Hi, I’m Tyler Charron — a Mechanical Engineering student at the University of Waterloo, graduating in 2030. I originally began in Environmental Engineering before transferring into Mechanical Engineering, where I’m exploring design, problem-solving, and engineering systems that make a real-world impact. This site is where I share my projects, experiences, and discoveries as I grow as an engineer.
-          </p>
         </div>
       </section>
 
