@@ -20,7 +20,7 @@ export default function ResumePage() {
 
         <div className={s.resumeContainer}>
           <iframe 
-            src={`${resumePath}#view=FitH&toolbar=0&navpanes=0`} 
+            src={`${resumePath}#view=Fit&toolbar=0&navpanes=0&scrollbar=0`} 
             className={s.pdfViewer} 
             title="Tyler Charron Resume"
           />
