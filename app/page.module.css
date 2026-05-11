@@ -1,37 +1,4 @@
-/* Navigation */
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 2rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  /* mix-blend-mode: difference; */
-}
 
-.navLogo {
-  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.navLinks {
-  display: flex;
-  gap: 2rem;
-}
-
-.navLink {
-  font-size: 0.9rem;
-  color: var(--text-primary);
-  letter-spacing: 0.05em;
-  font-weight: 500;
-}
 
 /* Hero Section */
 .hero {

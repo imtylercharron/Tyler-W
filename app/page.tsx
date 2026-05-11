@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Mail, Link as LinkIcon, Search } from "lucide-react";
+import { Mail, Link as LinkIcon } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 function LinkedInIcon({ size = 18 }: { size?: number }) {
   return (
@@ -34,18 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <nav className={s.nav}>
-        <a href="#" className={s.navLogo}>
-          &gt; tyler_charron
-        </a>
-        <div className={s.navLinks}>
-          <a href="#" className={s.navLink}>Home</a>
-          <a href="#projects" className={s.navLink}>Projects ⌄</a>
-          <a href="#contact" className={s.navLink}>Contact</a>
-          <a href="#about" className={s.navLink}>About Me</a>
-          <a href="#" className={s.navLink} style={{ display: 'flex', alignItems: 'center' }}><Search size={18} /></a>
-        </div>
-      </nav>
+      <Navbar />
 
       <section className={s.hero}>
         <Image
