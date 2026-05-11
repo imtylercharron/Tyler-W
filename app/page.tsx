@@ -49,29 +49,23 @@ export default function Home() {
           <div className={s.heroNameWrapper}>
             <h1 className={s.heroName}>{displayText || "T"}</h1>
           </div>
+          <p className={s.heroAboutText} id="about">
+            Hi, I’m Tyler Charron — a Mechanical Engineering student at the University of Waterloo, graduating in 2030. I originally began in Environmental Engineering before transferring into Mechanical Engineering, where I’m exploring design, problem-solving, and engineering systems that make a real-world impact. This site is where I share my projects, experiences, and discoveries as I grow as an engineer.
+          </p>
         </div>
       </section>
 
       <div className={s.contentWrapper}>
-        <section className={s.portfolioSection}>
-          <div className={s.aboutSection} id="about">
-            <h2 className={s.aboutText}>
-              Welcome to my digital space, where I dive into my engineering discoveries.
-            </h2>
-            
-            <div className={s.quickLinksHorizontal}>
-              <a href="#home" className={s.quickLinkItem}>Home</a>
-              <a href="https://www.tylercharron.com/portfolio" className={s.quickLinkItem}>Projects</a>
-              <a href="https://www.tylercharron.com/resume" className={s.quickLinkItem}>Resume</a>
-              <a href="https://www.tylercharron.com/contact" className={s.quickLinkItem}>Contact</a>
-            </div>
-          </div>
-        </section>
-
         <footer className={s.footer} id="contact">
+          <div className={s.quickLinksHorizontal}>
+            <a href="#home" className={s.quickLinkItem}>Home</a>
+            <a href="https://www.tylercharron.com/portfolio" className={s.quickLinkItem}>Projects</a>
+            <a href="https://www.tylercharron.com/contact" className={s.quickLinkItem}>Contact</a>
+            <a href="#about" className={s.quickLinkItem}>About Me</a>
+          </div>
           <div className={s.footerIcons}>
             <a href="https://www.linkedin.com/in/tylercharron/" target="_blank" rel="noopener noreferrer"><LinkedInIcon size={24} /></a>
-            <a href="mailto:t2charro@uwaterloo.ca"><Mail size={24} /></a>
+            <a href="mailto:imtylercharron@gmail.com"><Mail size={24} /></a>
           </div>
         </footer>
       </div>
