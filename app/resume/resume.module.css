@@ -63,13 +63,15 @@
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.08);
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .pdfViewer {
   width: 100%;
   height: 100%;
   border: none;
+  pointer-events: none;
+  transform: scale(1.02);
+  transform-origin: center center;
 }
 
 .downloadBtn {
