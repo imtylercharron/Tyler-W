@@ -54,9 +54,12 @@ export default function Home() {
 
       <div className={s.contentWrapper}>
         <section className={s.aboutSection} id="about">
-          <p className={s.aboutText}>
-            Hi, I’m Tyler Charron. I’m currently studying mechanical engineering with interests in robotics, advanced automotive systems, and aerospace technology. I’m passionate about engineering design, emerging technologies, and building projects that merge creativity with real-world functionality.
-          </p>
+          <div className={s.aboutContent}>
+            <h2 className={s.aboutTitle}>About Me</h2>
+            <p className={s.aboutText}>
+              Hi, I’m Tyler Charron. I’m currently studying mechanical engineering with interests in robotics, advanced automotive systems, and aerospace technology. I’m passionate about engineering design, emerging technologies, and building projects that merge creativity with real-world functionality.
+            </p>
+          </div>
         </section>
         <footer className={s.footer} id="contact">
           <div className={s.quickLinksHorizontal}>
