@@ -37,7 +37,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <section className={s.hero}>
+      <section className={s.hero} id="home">
         <Image
           src="/59d4227b-3f1b-45ea-91ef-12900193042d.png"
           alt="Plane Background"
@@ -60,10 +60,10 @@ export default function Home() {
             </h2>
             
             <div className={s.quickLinksHorizontal}>
-              <a href="#" className={s.quickLinkItem}>Home</a>
-              <a href="#projects" className={s.quickLinkItem}>Projects</a>
-              <a href="#resume" className={s.quickLinkItem}>Resume</a>
-              <a href="#contact" className={s.quickLinkItem}>Contact</a>
+              <a href="#home" className={s.quickLinkItem}>Home</a>
+              <a href="https://www.tylercharron.com/portfolio" className={s.quickLinkItem}>Projects</a>
+              <a href="https://www.tylercharron.com/resume" className={s.quickLinkItem}>Resume</a>
+              <a href="https://www.tylercharron.com/contact" className={s.quickLinkItem}>Contact</a>
             </div>
           </div>
         </section>

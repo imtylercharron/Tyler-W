@@ -30,15 +30,15 @@ export default function Navbar() {
           <button className={s.mobileCloseBtn} onClick={closeMenu}>
             <X size={24} />
           </button>
-          <a href="#" className={s.navLink} onClick={closeMenu}>Home</a>
-          <a href="#projects" className={s.navLink} onClick={closeMenu}>Projects</a>
-          <a href="#resume" className={s.navLink} onClick={closeMenu}>Resume</a>
+          <a href="#home" className={s.navLink} onClick={closeMenu}>Home</a>
+          <a href="https://www.tylercharron.com/portfolio" className={s.navLink} onClick={closeMenu}>Projects</a>
+          <a href="https://www.tylercharron.com/resume" className={s.navLink} onClick={closeMenu}>Resume</a>
           <a href="#about" className={s.navLink} onClick={closeMenu}>About Me</a>
-          <a href="#contact" className={`${s.navLink} ${s.mobileOnly}`} onClick={closeMenu}>Contact Me</a>
+          <a href="https://www.tylercharron.com/contact" className={`${s.navLink} ${s.mobileOnly}`} onClick={closeMenu}>Contact Me</a>
         </div>
         
         <div className={s.rightSection}>
-          <a href="#contact" className={s.contactBtn}>Contact Me</a>
+          <a href="https://www.tylercharron.com/contact" className={s.contactBtn}>Contact Me</a>
           <button className={s.hamburger} onClick={() => setMobileMenuOpen(true)}>
             <Menu size={24} />
           </button>
