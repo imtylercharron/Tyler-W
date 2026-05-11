@@ -39,9 +39,7 @@
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 1.25rem;
-  background: linear-gradient(90deg, #ffc8c8 0%, #f5e6e8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
@@ -54,11 +52,9 @@
 .navLink {
   font-size: 0.95rem;
   font-weight: 600;
-  background: linear-gradient(90deg, #ffc8c8 0%, #f5e6e8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   position: relative;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
   text-decoration: none;
 }
 
@@ -75,7 +71,7 @@
 }
 
 .navLink:hover {
-  opacity: 0.8;
+  color: #ffc8c8;
 }
 
 .navLink:hover::after {
