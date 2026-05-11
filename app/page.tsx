@@ -53,6 +53,11 @@ export default function Home() {
       </section>
 
       <div className={s.contentWrapper}>
+        <section className={s.aboutSection} id="about">
+          <p className={s.aboutText}>
+            Hi, I’m Tyler Charron. I’m currently studying mechanical engineering with interests in robotics, advanced automotive systems, and aerospace technology. I’m passionate about engineering design, emerging technologies, and building projects that merge creativity with real-world functionality.
+          </p>
+        </section>
         <footer className={s.footer} id="contact">
           <div className={s.quickLinksHorizontal}>
             <a href="#home" className={s.quickLinkItem}>Home</a>

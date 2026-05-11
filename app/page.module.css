@@ -85,6 +85,23 @@
   flex-direction: column;
 }
 
+.aboutSection {
+  padding: 6rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutText {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #222;
+  max-width: 800px;
+  text-align: center;
+  font-weight: 500;
+}
+
 .quickLinksHorizontal {
   display: flex;
   gap: 3rem;
@@ -162,8 +179,8 @@
   }
   
   .aboutText {
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    padding: 0 1rem;
   }
   
   .quickLinksHorizontal {
