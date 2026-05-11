@@ -127,7 +127,7 @@
 }
 
 .aboutText {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Constantia', serif;
   font-size: 1.25rem;
   line-height: 1.9;
   color: #444;
@@ -143,7 +143,7 @@
 }
 
 .quickLinkItem {
-  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-family: 'Constantia', serif;
   font-size: 1.7rem;
   font-weight: 700;
   color: #555;
