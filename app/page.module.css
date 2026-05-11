@@ -78,7 +78,7 @@
 .contentWrapper {
   position: relative;
   z-index: 1;
-  background-color: #F7F5F0; /* Soft beige */
+  background-color: #FAF1E4; /* Warmer soft beige */
   color: #1A1A1A; /* Dark gray text */
   margin-top: 100vh;
   display: flex;
