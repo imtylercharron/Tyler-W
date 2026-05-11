@@ -30,10 +30,10 @@ export default function Navbar() {
           <button className={s.mobileCloseBtn} onClick={closeMenu}>
             <X size={24} />
           </button>
-          <a href="#home" className={s.navLink} onClick={closeMenu}>Home</a>
+          <a href="/#home" className={s.navLink} onClick={closeMenu}>Home</a>
           <a href="https://www.tylercharron.com/portfolio" className={s.navLink} onClick={closeMenu}>Projects</a>
           <a href="https://www.tylercharron.com/resume" className={s.navLink} onClick={closeMenu}>Resume</a>
-          <a href="#about" className={s.navLink} onClick={closeMenu}>About Me</a>
+          <a href="/#about" className={s.navLink} onClick={closeMenu}>About Me</a>
           <a href="https://www.tylercharron.com/contactme" className={`${s.navLink} ${s.mobileOnly}`} onClick={closeMenu}>Contact Me</a>
         </div>
         
