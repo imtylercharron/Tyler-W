@@ -63,14 +63,14 @@ export default function Home() {
         </section>
         <footer className={s.footer} id="contact">
           <div className={s.quickLinksHorizontal}>
-            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className={s.quickLinkItem}>Home</a>
+            <a href="#home" className={s.quickLinkItem}>Home</a>
             <a href="https://www.tylercharron.com/portfolio" className={s.quickLinkItem}>Projects</a>
             <a href="https://www.tylercharron.com/resume" className={s.quickLinkItem}>Resume</a>
-            <a href="mailto:imtylercharron@gmail.com" className={s.quickLinkItem}>Contact me</a>
+            <a href="https://www.tylercharron.com/contactme" className={s.quickLinkItem}>Contact me</a>
           </div>
           <div className={s.footerIcons}>
             <a href="https://www.linkedin.com/in/tylercharron/" target="_blank" rel="noopener noreferrer"><LinkedInIcon size={24} /></a>
-            <a href="mailto:imtylercharron@gmail.com"><Mail size={24} /></a>
+            <a href="mailto:imtylercharron@gmail.com" target="_blank" rel="noopener noreferrer"><Mail size={24} /></a>
           </div>
         </footer>
       </div>
