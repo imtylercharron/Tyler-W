@@ -17,20 +17,40 @@ import { profile } from "@/lib/data";
 
 export default function Home() {
   const [displayText, setDisplayText] = useState("");
-  const targetText = "TYLER CHARRON";
+  const baseText = "TYLER ";
+  const lastName = "CHARRON";
+  const fullText = baseText + lastName;
   
   useEffect(() => {
-    let currentIndex = 1;
-    const intervalId = setInterval(() => {
-      if (currentIndex <= targetText.length) {
-        setDisplayText(targetText.slice(0, currentIndex));
-        currentIndex++;
+    let currentText = "";
+    let isDeleting = false;
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    const type = () => {
+      if (!isDeleting) {
+        if (currentText.length < fullText.length) {
+          currentText = fullText.slice(0, currentText.length + 1);
+          setDisplayText(currentText);
+          timeoutId = setTimeout(type, 150);
+        } else {
+          isDeleting = true;
+          timeoutId = setTimeout(type, 1500);
+        }
       } else {
-        clearInterval(intervalId);
+        if (currentText.length > baseText.length) {
+          currentText = fullText.slice(0, currentText.length - 1);
+          setDisplayText(currentText);
+          timeoutId = setTimeout(type, 100);
+        } else {
+          isDeleting = false;
+          timeoutId = setTimeout(type, 500);
+        }
       }
-    }, 150);
-    
-    return () => clearInterval(intervalId);
+    };
+
+    timeoutId = setTimeout(type, 150);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
