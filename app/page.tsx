@@ -53,54 +53,27 @@ export default function Home() {
       </section>
 
       <div className={s.contentWrapper}>
-        <section className={s.intro}>
-        <p className={s.introText}>
-          Welcome to my digital space, where I dive into my engineering discoveries.
-        </p>
-      </section>
-
-      <section className={s.gridSection} id="projects">
-        <div className={s.grid}>
-          {profile.experience.map((exp, i) => (
-            <a href="#" key={`exp-${i}`} className={s.gridCard}>
-              <div className={s.gridImageWrap}>
-                <div style={{ width: '100%', height: '100%', background: 'var(--bg-secondary)' }} className={s.gridImage}></div>
-              </div>
-              <div className={s.gridTitle}>{exp.title}</div>
-            </a>
-          ))}
-          {profile.education.map((edu, i) => (
-             <a href="#" key={`edu-${i}`} className={s.gridCard}>
-              <div className={s.gridImageWrap}>
-                <div style={{ width: '100%', height: '100%', background: 'var(--bg-secondary)' }} className={s.gridImage}></div>
-              </div>
-              <div className={s.gridTitle}>{edu.degree}</div>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className={s.quickLinksSection}>
-        <div className={s.quickLinksContainer}>
-          <h2 className={s.quickLinksTitle}>Quick<br />Links</h2>
-          <div className={s.quickLinksList}>
-            <a href="#projects" className={s.quickLink}>&gt; PROJECTS</a>
-            <a href="#about" className={s.quickLink}>&gt; ABOUT ME</a>
-            <a href="#contact" className={s.quickLink}>&gt; CONTACT</a>
+        <section className={s.portfolioSection}>
+          <div className={s.aboutSection} id="about">
+            <h2 className={s.aboutText}>
+              Welcome to my digital space, where I dive into my engineering discoveries.
+            </h2>
+            
+            <div className={s.quickLinksHorizontal}>
+              <a href="#" className={s.quickLinkItem}>Home</a>
+              <a href="#projects" className={s.quickLinkItem}>Projects</a>
+              <a href="#resume" className={s.quickLinkItem}>Resume</a>
+              <a href="#contact" className={s.quickLinkItem}>Contact</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer className={s.footer} id="contact">
-        <div className={s.footerLinks}>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><LinkedInIcon size={20} /></a>
-          <a href={`mailto:${profile.email}`}><Mail size={20} /></a>
-          <a href="#"><LinkIcon size={20} /></a>
-        </div>
-        <div>
-          Copyright © {new Date().getFullYear()} Tyler Charron. All Rights Reserved
-        </div>
-      </footer>
+        <footer className={s.footer} id="contact">
+          <div className={s.footerIcons}>
+            <a href="https://www.linkedin.com/in/tylercharron/" target="_blank" rel="noopener noreferrer"><LinkedInIcon size={24} /></a>
+            <a href="mailto:t2charro@uwaterloo.ca"><Mail size={24} /></a>
+          </div>
+        </footer>
       </div>
     </>
   );
