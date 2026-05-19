@@ -3,7 +3,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import s from "./contact.module.css";
-import { Mail, Linkedin } from "lucide-react";
+
 
 export default function ContactMePage() {
   return (
