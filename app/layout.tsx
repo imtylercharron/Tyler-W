@@ -13,14 +13,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tyler Charron — Mechanical Engineering Student",
+  title: "Tyler Charron — Mechanical Engineering",
   description:
-    "Portfolio of Tyler Charron, Mechanical Engineering student at the University of Ottawa, passionate about sustainable energy, CAD, and technical problem-solving.",
+    "Currently studying mechanical engineering with interests in robotics, advanced automotive systems, and aerospace technology. Passionate about engineering design, emerging technologies, and building projects that merge creativity with real-world functionality.",
   keywords: ["Tyler Charron", "Mechanical Engineering", "University of Ottawa", "Portfolio", "Engineer"],
   authors: [{ name: "Tyler Charron" }],
+  icons: {
+    icon: '/icon.png',
+  },
   openGraph: {
-    title: "Tyler Charron — Mechanical Engineering Student",
-    description: "Mechanical Engineering student passionate about sustainable energy and technical innovation.",
+    title: "Tyler Charron — Mechanical Engineering",
+    description: "Currently studying mechanical engineering with interests in robotics, advanced automotive systems, and aerospace technology. Passionate about engineering design, emerging technologies, and building projects that merge creativity with real-world functionality.",
     type: "website",
   },
 };
