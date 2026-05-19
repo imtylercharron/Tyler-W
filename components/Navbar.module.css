@@ -27,11 +27,11 @@
   gap: 1rem;
 }
 
-.logoPlaceholder {
+.logoImage {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ffc8c8 0%, #f5e6e8 100%);
+  object-fit: cover;
   box-shadow: 0 0 15px rgba(255, 200, 200, 0.3);
 }
 

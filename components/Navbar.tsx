@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import s from './Navbar.module.css';
 
 export default function Navbar() {
@@ -22,7 +23,7 @@ export default function Navbar() {
     <>
       <nav className={`${s.navbar} ${scrolled ? s.scrolled : ''}`}>
         <div className={s.logoContainer}>
-          <div className={s.logoPlaceholder}></div>
+          <Image src="/logo.png" alt="Tyler Charron Logo" width={40} height={40} className={s.logoImage} />
           <span className={s.name}>Tyler Charron</span>
         </div>
         
