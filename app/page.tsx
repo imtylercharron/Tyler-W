@@ -60,7 +60,7 @@ export default function Home() {
 
       <section className={s.hero}>
         <Image
-          src="/59d4227b-3f1b-45ea-91ef-12900193042d.png"
+          src="/Background.png"
           alt="Plane Background"
           fill
           className={s.heroBg}
