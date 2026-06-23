@@ -32,7 +32,7 @@ export default function Navbar() {
             <X size={24} />
           </button>
           <a href="/#home" className={s.navLink} onClick={closeMenu}>Home</a>
-          <a href="/portfolio" className={s.navLink} onClick={closeMenu}>Projects</a>
+          <a href="/portfolio" className={s.navLink} onClick={closeMenu}>Portfolio</a>
           <a href="/resume" className={s.navLink} onClick={closeMenu}>Resume</a>
           <a href="/#about" className={s.navLink} onClick={closeMenu}>About Me</a>
           <a href="/contactme" className={`${s.navLink} ${s.mobileOnly}`} onClick={closeMenu}>Contact Me</a>
