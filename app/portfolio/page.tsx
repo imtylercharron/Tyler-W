@@ -10,6 +10,15 @@ export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState<'all' | 'projects' | 'designTeams' | 'reverseEngineering'>('all');
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
 
+  const getCategoryLabel = (category: string) => {
+    switch (category) {
+      case 'projects': return 'Project';
+      case 'designTeams': return 'Design Team';
+      case 'reverseEngineering': return 'Reverse Engineering';
+      default: return '';
+    }
+  };
+
   // Close modal with Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -172,8 +181,7 @@ export default function PortfolioPage() {
                 {/* Card Info Area */}
                 <div className={s.cardContent}>
                   <div className={s.cardMeta}>
-                    <span className={s.cardCategoryText}>{item.visualLabel}</span>
-                    <span className={s.cardTypeText}>{item.typeLabel}</span>
+                    <span className={s.cardCategoryText}>{getCategoryLabel(item.category)}</span>
                   </div>
                   <h2 className={s.cardTitle}>{item.title}</h2>
                   <p className={s.cardDesc}>{item.shortDescription}</p>
@@ -237,8 +245,7 @@ export default function PortfolioPage() {
               {/* Modal Main Content */}
               <div className={s.modalContent}>
                 <div className={s.modalMeta}>
-                  <span className={s.modalCategoryText}>{selectedItem.visualLabel}</span>
-                  <span className={s.modalTypeText}>{selectedItem.typeLabel}</span>
+                  <span className={s.modalCategoryText}>{getCategoryLabel(selectedItem.category)}</span>
                 </div>
 
                 <h3 id="modal-title" className={s.modalTitle}>
