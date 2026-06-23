@@ -108,7 +108,7 @@ export default function PortfolioPage() {
           <header className={s.header}>
             <h1 className={s.title}>Portfolio</h1>
             <p className={s.subtitle}>
-              A showcase of mechanical design projects, student engineering teams, and thermodynamic/structural reverse engineering studies.
+              A collection of mechanical engineering projects, design team experience, and reverse engineering work.
             </p>
           </header>
 
@@ -166,9 +166,7 @@ export default function PortfolioPage() {
                     background: `linear-gradient(135deg, ${item.gradientColors[0]} 0%, ${item.gradientColors[1]} 100%)`
                   }}
                 >
-                  <div className={s.cardVisualOutline}>
-                    <span className={s.cardVisualIcon}>{item.visualLabel}</span>
-                  </div>
+                  <div className={s.cardVisualOutline} />
                 </div>
 
                 {/* Card Info Area */}
@@ -233,9 +231,7 @@ export default function PortfolioPage() {
                   background: `linear-gradient(135deg, ${selectedItem.gradientColors[0]} 0%, ${selectedItem.gradientColors[1]} 100%)`
                 }}
               >
-                <div className={s.modalVisualOutline}>
-                  <span className={s.modalVisualIcon}>{selectedItem.visualLabel}</span>
-                </div>
+                <div className={s.modalVisualOutline} />
               </div>
 
               {/* Modal Main Content */}
