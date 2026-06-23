@@ -574,3 +574,55 @@
     font-size: 1.7rem;
   }
 }
+
+/* Section Images & Placeholders */
+.sectionImageWrapper {
+  margin-top: 1.25rem;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sectionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.sectionImageWrapper:hover .sectionImage {
+  transform: scale(1.05);
+}
+
+.sectionImagePlaceholder {
+  margin-top: 1.25rem;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  border: 1.5px dashed rgba(128, 203, 196, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.015);
+  color: #80cbc4;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sectionImagePlaceholder:hover {
+  background-color: rgba(128, 203, 196, 0.05);
+  border-color: rgba(128, 203, 196, 0.5);
+  color: #e0f2f1;
+}
+
+.sectionImagePlaceholderText {
+  letter-spacing: 0.05em;
+}
+

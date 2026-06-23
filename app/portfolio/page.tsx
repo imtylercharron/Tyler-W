@@ -46,6 +46,23 @@ export default function PortfolioPage() {
     ? portfolioItems
     : portfolioItems.filter(item => item.category === activeFilter);
 
+  // Helper to render section image or placeholder
+  const renderSectionImage = (item: PortfolioItem, index: number, title: string) => {
+    const src = item.sectionImages?.[index];
+    if (src) {
+      return (
+        <div className={s.sectionImageWrapper}>
+          <img src={src} alt={title} className={s.sectionImage} />
+        </div>
+      );
+    }
+    return (
+      <div className={s.sectionImagePlaceholder}>
+        <span className={s.sectionImagePlaceholderText}>Add Photo</span>
+      </div>
+    );
+  };
+
   // Helper to render custom 3 sections based on category
   const renderDetailSections = (item: PortfolioItem) => {
     switch (item.category) {
@@ -55,14 +72,17 @@ export default function PortfolioPage() {
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-what">What?</h4>
               <p className={s.sectionBody}>{item.what}</p>
+              {renderSectionImage(item, 0, "What")}
             </div>
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-how">How?</h4>
               <p className={s.sectionBody}>{item.how}</p>
+              {renderSectionImage(item, 1, "How")}
             </div>
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-results">Results</h4>
               <p className={s.sectionBody}>{item.results}</p>
+              {renderSectionImage(item, 2, "Results")}
             </div>
           </div>
         );
@@ -72,14 +92,17 @@ export default function PortfolioPage() {
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-team">Team</h4>
               <p className={s.sectionBody}>{item.team}</p>
+              {renderSectionImage(item, 0, "Team")}
             </div>
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-role">My Role</h4>
               <p className={s.sectionBody}>{item.role}</p>
+              {renderSectionImage(item, 1, "Role")}
             </div>
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-impact">Impact</h4>
               <p className={s.sectionBody}>{item.impact}</p>
+              {renderSectionImage(item, 2, "Impact")}
             </div>
           </div>
         );
@@ -89,14 +112,17 @@ export default function PortfolioPage() {
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-system">System Studied</h4>
               <p className={s.sectionBody}>{item.systemStudied}</p>
+              {renderSectionImage(item, 0, "System Studied")}
             </div>
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-method">Method</h4>
               <p className={s.sectionBody}>{item.method}</p>
+              {renderSectionImage(item, 1, "Method")}
             </div>
             <div className={s.modalSection}>
               <h4 className={s.sectionTitle} id="detail-section-findings">Findings</h4>
               <p className={s.sectionBody}>{item.findings}</p>
+              {renderSectionImage(item, 2, "Findings")}
             </div>
           </div>
         );

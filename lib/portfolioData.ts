@@ -9,6 +9,7 @@ export interface BasePortfolioItem {
   tags: string[];
   gradientColors: string[]; // e.g. ['#f97316', '#0d9488']
   detailDescription: string;
+  sectionImages?: string[]; // Array of exactly 3 image paths matching the 3 custom sections
 }
 
 export interface ProjectItem extends BasePortfolioItem {
@@ -52,7 +53,8 @@ export const portfolioItems: PortfolioItem[] = [
     detailDescription: "A project focused on integrating software, hardware, and control systems. The robot navigates unknown grid-based mazes by computing optimal paths dynamically and maintaining accurate orientation using sensor feedback.",
     what: "A custom differential-drive mobile robot designed to map, solve, and navigate a 16x16 grid maze from a corner start to the center destination.",
     how: "Constructed with a 3D-printed chassis, micro-metal gearmotors, time-of-flight (ToF) distance sensors, and an Arduino Uno. The software utilizes a Flood-Fill algorithm for mapping/routing, paired with a PD feedback controller for wall-following and navigation alignment.",
-    results: "Completed testing across multiple maze patterns with 100% path accuracy, achieving a 28% reduction in navigation time compared to traditional dead-reckoning methods."
+    results: "Completed testing across multiple maze patterns with 100% path accuracy, achieving a 28% reduction in navigation time compared to traditional dead-reckoning methods.",
+    sectionImages: ["/earth.png", "/green_planet_bg.png", "/plane_cotton_candy.png"] // Demo images from public
   },
   {
     id: "proj2",
@@ -71,7 +73,8 @@ export const portfolioItems: PortfolioItem[] = [
     detailDescription: "This project addresses global water accessibility by designing a portable filtration system. SolidWorks simulation was used to analyze fluid flow and structural loads under varying water heights.",
     what: "A modular, easy-to-clean water filtration system using locally-sourced sand, charcoal, and ceramic filters to supply clean drinking water.",
     how: "Developed the CAD assembly focusing on modular threads and snaps for toolless assembly. Ran FEA stress tests on shell walls to withstand hydrostatic pressures and optimized wall thicknesses.",
-    results: "Reduced overall plastic material volume by 18% while maintaining a safety factor of 2.2, with a calculated flow rate of 4.5 liters per hour."
+    results: "Reduced overall plastic material volume by 18% while maintaining a safety factor of 2.2, with a calculated flow rate of 4.5 liters per hour.",
+    sectionImages: ["", "", ""] // Placeholders demo
   },
   {
     id: "team1",
@@ -86,11 +89,12 @@ export const portfolioItems: PortfolioItem[] = [
       "Balanced engineering constraints with public-facing design decisions."
     ],
     tags: ["Project Management", "Solar Car", "CAD"],
-    gradientColors: ["#f97316", "#0d9488"], // Orange to Teal (matching screenshot!)
+    gradientColors: ["#f97316", "#0d9488"], // Orange to Teal
     detailDescription: "Active participant in the student solar car design team, coordinating branding, technical decals, sponsorship resources, and cross-functional design tasks to prepare the solar vehicle for collegiate competition.",
     team: "Midnight Sun Solar Car (University of Ottawa Student Design Team)",
     role: "Sponsorship Coordinator & Creative Design Liaison",
-    impact: "Secured over $15,000 in cash and material sponsorships. Developed the high-contrast aerodynamic wrap design that improved team visibility and won praises during the Formula Sun Grand Prix tech inspection."
+    impact: "Secured over $15,000 in cash and material sponsorships. Developed the high-contrast aerodynamic wrap design that improved team visibility and won praises during the Formula Sun Grand Prix tech inspection.",
+    sectionImages: ["/avatar.png", "/cotton_candy_city.png", "/huge_plane_left_cutoff_cotton_candy.png"] // Demo images
   },
   {
     id: "team2",
@@ -109,7 +113,8 @@ export const portfolioItems: PortfolioItem[] = [
     detailDescription: "Worked as a mechanical member of the student Mars Rover team. Focused on upgrading the robotic manipulator arm to perform precision operations like typing on a keyboard, flipping switches, and collecting soil cores.",
     team: "uOttawa Mars Rover Student Team",
     role: "Mechanical Design Member — Robotic Subteam",
-    impact: "Designed a lightweight joint layout reducing robotic arm weight by 14% while increasing payload lift capacity from 2.0kg to 3.5kg, leading to a top-10 finish in the robotic arm task."
+    impact: "Designed a lightweight joint layout reducing robotic arm weight by 14% while increasing payload lift capacity from 2.0kg to 3.5kg, leading to a top-10 finish in the robotic arm task.",
+    sectionImages: ["", "", ""] // Placeholders demo
   },
   {
     id: "rev1",
@@ -128,7 +133,8 @@ export const portfolioItems: PortfolioItem[] = [
     detailDescription: "A deep dive study to inspect how small temperature differences can be translated into rotary motion. The project highlights tolerance analysis, thermodynamic calculations, and mechanical losses.",
     systemStudied: "Low-Temperature Differential (LTD) Stirling Engine, designed to run on the warmth of a coffee mug or hand.",
     method: "Fully disassembled a physical engine, measured dimensions of all connecting rods, pistons, flywheel, and displacer chamber using digital micrometers. Recreated the assembly in SolidWorks, performed kinematic simulations, and calculated thermodynamic pressure-volume loops.",
-    findings: "Determined that mechanical friction in the piston seal contributed to 34% of power losses. Established that a displacer-to-piston volumetric ratio of 15:1 was optimal for operation at low temperature ranges (5°C to 15°C temperature difference)."
+    findings: "Determined that mechanical friction in the piston seal contributed to 34% of power losses. Established that a displacer-to-piston volumetric ratio of 15:1 was optimal for operation at low temperature ranges (5°C to 15°C temperature difference).",
+    sectionImages: ["/moody_plane.png", "/new_plane_bg.png", "/rocket_cotton_candy_sky.png"] // Demo images
   },
   {
     id: "rev2",
@@ -147,6 +153,7 @@ export const portfolioItems: PortfolioItem[] = [
     detailDescription: "An engineering analysis of an automotive component. Reconstructs fluid-structure interactions to evaluate safety factors, deformation, and clamping force distribution under maximum hydraulic pressures.",
     systemStudied: "Dual-piston hydraulic disc brake caliper system from a standard light motorcycle.",
     method: "Measured and modeled caliper components. Conducted Finite Element Analysis (FEA) under a maximum line pressure of 10 MPa (simulating panic braking) to examine deformation, stress concentration, and pad wear trends.",
-    findings: "Discovered stress concentrations exceeding 210 MPa at the bridge radius. Recommended a radius increase from 2mm to 4.5mm in the casting, reducing peak stress by 28% and preventing potential material fatigue cracks."
+    findings: "Discovered stress concentrations exceeding 210 MPa at the bridge radius. Recommended a radius increase from 2mm to 4.5mm in the casting, reducing peak stress by 28% and preventing potential material fatigue cracks.",
+    sectionImages: ["", "", ""] // Placeholders demo
   }
 ];
