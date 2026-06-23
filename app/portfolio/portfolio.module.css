@@ -1,0 +1,576 @@
+.main {
+  min-height: 100vh;
+  background-color: #FAF1E4;
+  color: #1A1A1A;
+  font-family: 'Inter', system-ui, sans-serif;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #111;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffc8c8 0%, #f5e6e8 100%);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-family: 'Constantia', serif;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Category Filter Tabs */
+.filterBar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 3rem 0;
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  background: rgba(27, 38, 59, 0.05);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterTab:hover {
+  background: rgba(27, 38, 59, 0.1);
+  color: #111;
+  transform: translateY(-2px);
+}
+
+.filterTabActive {
+  background: #121b1d;
+  color: #FAF1E4;
+  border-color: #121b1d;
+  box-shadow: 0 4px 12px rgba(18, 27, 29, 0.25);
+}
+
+/* Portfolio Cards Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Card Replicating the User's Screenshot Exactly */
+.card {
+  background-color: #0c1416; /* Dark slate teal matching screenshot base */
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(128, 203, 196, 0.3);
+}
+
+/* Card Visual Top Section */
+.cardVisual {
+  height: 190px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Diagonal line patterns to match visual design */
+.cardVisual::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  pointer-events: none;
+}
+
+/* The rounded outline box inside the top visual */
+.cardVisualOutline {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  position: relative;
+  z-index: 2;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover .cardVisualOutline {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.cardVisualIcon {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.1em;
+}
+
+/* Card Body Content */
+.cardContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Metadata Line (e.g. SOLAR CAR | TEAM PROJECT) */
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cardCategoryText {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #80cbc4; /* Mint green category label */
+  text-transform: uppercase;
+}
+
+.cardTypeText {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #4fc3f7; /* Light blue project type label */
+  text-transform: uppercase;
+}
+
+/* Bold white title */
+.cardTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.35;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+/* Description paragraph */
+.cardDesc {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #a0aec0; /* Slate-300 level gray */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Bullets list */
+.cardBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.cardBulletItem {
+  position: relative;
+  padding-left: 1.25rem;
+  color: #cbd5e1; /* Off white / light gray */
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.cardBulletItem::before {
+  content: "•";
+  position: absolute;
+  left: 0.2rem;
+  color: #80cbc4; /* Mint bullet point */
+  font-weight: bold;
+}
+
+/* Tags container */
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.cardTag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.cardTag:hover {
+  background-color: rgba(128, 203, 196, 0.15);
+  border-color: rgba(128, 203, 196, 0.3);
+}
+
+/* Premium Detail Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(5, 13, 14, 0.85); /* Blends with bg-primary */
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalContainer {
+  background-color: #0c1416;
+  border: 1px solid rgba(128, 203, 196, 0.15);
+  border-radius: 28px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 203, 196, 0.2) transparent;
+}
+
+.modalContainer::-webkit-scrollbar {
+  width: 6px;
+}
+.modalContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modalContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 203, 196, 0.2);
+  border-radius: 3px;
+}
+
+/* Close Button */
+.modalCloseBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.modalCloseBtn:hover {
+  background: #FAF1E4;
+  color: #0c1416;
+  transform: rotate(90deg) scale(1.05);
+  box-shadow: 0 4px 15px rgba(250, 241, 228, 0.3);
+}
+
+/* Modal Banner */
+.modalVisual {
+  height: 240px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.modalVisual::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.modalVisualOutline {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.modalVisualIcon {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Modal Body Content */
+.modalContent {
+  padding: 3rem;
+}
+
+.modalMeta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modalCategoryText {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #80cbc4;
+  text-transform: uppercase;
+}
+
+.modalTypeText {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #4fc3f7;
+  text-transform: uppercase;
+}
+
+.modalTitle {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.modalDesc {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* Custom 3-Section Grid for Modal (Reconfigured depending on type) */
+.modalSectionsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(128, 203, 196, 0.15);
+  padding-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.modalSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #80cbc4; /* Mint green headings */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: rgba(128, 203, 196, 0.2);
+}
+
+.sectionBody {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0;
+  white-space: pre-line; /* preserves newlines if any */
+}
+
+/* Tags in Modal */
+.modalTagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 2rem;
+  margin-top: 1.5rem;
+}
+
+.modalTag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FAF1E4;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.45rem 1.1rem;
+  border-radius: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .modalSectionsContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 120px;
+  }
+  .container {
+    padding: 0 1.25rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .filterBar {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .filterTab {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  .modalContent {
+    padding: 2rem 1.5rem;
+  }
+  .modalTitle {
+    font-size: 1.7rem;
+  }
+}

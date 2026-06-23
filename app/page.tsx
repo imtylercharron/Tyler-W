@@ -85,9 +85,9 @@ export default function Home() {
         <footer className={s.footer} id="contact">
           <div className={s.quickLinksHorizontal}>
             <a href="#home" className={s.quickLinkItem}>Home</a>
-            <a href="https://www.tylercharron.com/portfolio" className={s.quickLinkItem}>Projects</a>
-            <a href="https://www.tylercharron.com/resume" className={s.quickLinkItem}>Resume</a>
-            <a href="https://www.tylercharron.com/contactme" className={s.quickLinkItem}>Contact me</a>
+            <a href="/portfolio" className={s.quickLinkItem}>Projects</a>
+            <a href="/resume" className={s.quickLinkItem}>Resume</a>
+            <a href="/contactme" className={s.quickLinkItem}>Contact me</a>
           </div>
           <div className={s.footerIcons}>
             <a href="https://www.linkedin.com/in/tylercharron/" target="_blank" rel="noopener noreferrer"><LinkedInIcon size={24} /></a>
