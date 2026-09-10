@@ -41,20 +41,20 @@ export const portfolioItems: PortfolioItem[] = [
     category: "projects",
     visualLabel: "ROBOTICS",
     typeLabel: "ACADEMIC PROJECT",
-    title: "Autonomous Maze-Solving Robot: Microcontroller, Sensors & Control",
-    shortDescription: "Designed, built, and programmed an autonomous maze-solving differential drive robot utilizing infrared distance sensors and a PD control loop.",
+    title: "Self-Levelling Line-Following Robot",
+    shortDescription: "Designed an autonomous line-following robot with an active self-leveling platform, closed-loop PID control, and collision-avoidance object detection for stable payload transport.",
     bullets: [
-      "Programmed PID control algorithms on Arduino for precise motor synchronization.",
-      "Designed a custom PCB for sensor integration and power distribution.",
-      "Simulated path planning and maze-solving algorithms in MATLAB."
+      "Designed a 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD.",
+      "Integrated brightness, distance, and gyroscope sensors into a closed-loop PID control system.",
+      "Maintained platform stability within ±3° under a 1 kg payload with line tracking deviation < 2.5 cm."
     ],
-    tags: ["Robotics", "C++", "Control Systems", "PCB Design"],
-    gradientColors: ["#3b82f6", "#8b5cf6"], // Blue to purple
-    detailDescription: "A project focused on integrating software, hardware, and control systems. The robot navigates unknown grid-based mazes by computing optimal paths dynamically and maintaining accurate orientation using sensor feedback.",
-    what: "A custom differential-drive mobile robot designed to map, solve, and navigate a 16x16 grid maze from a corner start to the center destination.",
-    how: "Constructed with a 3D-printed chassis, micro-metal gearmotors, time-of-flight (ToF) distance sensors, and an Arduino Uno. The software utilizes a Flood-Fill algorithm for mapping/routing, paired with a PD feedback controller for wall-following and navigation alignment.",
-    results: "Completed testing across multiple maze patterns with 100% path accuracy, achieving a 28% reduction in navigation time compared to traditional dead-reckoning methods.",
-    sectionImages: ["/earth.png", "/green_planet_bg.png", "/plane_cotton_candy.png"] // Demo images from public
+    tags: ["Robotics", "PID Control", "CAD Design", "Mechatronics", "3D Printing", "Sensors"],
+    gradientColors: ["#3b82f6", "#8b5cf6"],
+    detailDescription: "An ME 101 mechanical engineering design project focused on developing an autonomous line-following mobile robot equipped with an active self-leveling payload platform. The system uses closed-loop PID feedback combining gyroscope, brightness, and distance sensors to maintain stability and prevent collisions during operation.",
+    what: "• Designed an autonomous line-following robot with an active self-leveling platform for stable object transport\n• Required real-time correction of platform tilt while maintaining line-tracking accuracy\n• Implemented object detection to stop the robot before collisions during autonomous operation",
+    how: "• Designed a compact 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD\n• Integrated brightness, distance, and gyroscope sensors into a closed-loop control system\n• Tuned PID control for both self-leveling and line-following to improve stability, tracking accuracy, and response time\n• Calibrated sensor thresholds through repeated testing under different surface and lighting conditions",
+    results: "• Maintained platform stability within ±3° during steady-state motion with a 1 kg payload\n• Achieved continuous line following with less than 2.5 cm deviation from the robot centerline\n• Reached a maximum speed of 0.4 m/s while maintaining stable tracking and leveling\n• Reduced unnecessary material use and print time by optimizing component geometry and part placement",
+    sectionImages: ["", "", ""]
   },
   {
     id: "proj2",
