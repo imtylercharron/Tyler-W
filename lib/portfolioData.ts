@@ -99,41 +99,61 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "rev1",
     category: "reverseEngineering",
-    visualLabel: "THERMODYNAMICS",
+    visualLabel: "AUTOMOTIVE",
     typeLabel: "CASE STUDY",
-    title: "LTD Stirling Engine: Thermal-to-Mechanical Energy Conversion",
-    shortDescription: "Disassembled, modeled, and analyzed a low-temperature differential (LTD) Stirling engine to study thermodynamic cycles and mechanical efficiencies.",
+    title: "Internal Combustion Engine",
+    shortDescription: "Teardown and reverse engineering of a single-cylinder 200–300cc Honda snowblower engine, analyzing mechanical power conversion, fuel-air mixing, and valve timing.",
     bullets: [
-      "Recreated all 18 mechanical components in SolidWorks with precise tolerance fits.",
-      "Conducted motion simulations to analyze dead space and piston strokes.",
-      "Calculated theoretical power output based on temperature differentials."
+      "Disassembled a 200-300cc single-cylinder IC engine into major subsystems.",
+      "Traced fuel-air induction, ignition timing, and linear-to-rotational power conversion.",
+      "Documented component geometries, wear tolerances, and assembly sequences."
     ],
-    tags: ["SolidWorks", "Thermodynamics", "Motion Simulation"],
-    gradientColors: ["#ec4899", "#f43f5e"], // Pink to Rose
-    detailDescription: "A deep dive study to inspect how small temperature differences can be translated into rotary motion. The project highlights tolerance analysis, thermodynamic calculations, and mechanical losses.",
-    systemStudied: "Low-Temperature Differential (LTD) Stirling Engine, designed to run on the warmth of a coffee mug or hand.",
-    method: "Fully disassembled a physical engine, measured dimensions of all connecting rods, pistons, flywheel, and displacer chamber using digital micrometers. Recreated the assembly in SolidWorks, performed kinematic simulations, and calculated thermodynamic pressure-volume loops.",
-    findings: "Determined that mechanical friction in the piston seal contributed to 34% of power losses. Established that a displacer-to-piston volumetric ratio of 15:1 was optimal for operation at low temperature ranges (5°C to 15°C temperature difference).",
-    sectionImages: ["/moody_plane.png", "/new_plane_bg.png", "/rocket_cotton_candy_sky.png"] // Demo images
+    tags: ["Engine Systems", "Teardown", "Carburetion", "Thermodynamics", "Power Transmission"],
+    gradientColors: ["#ec4899", "#f43f5e"],
+    detailDescription: "A practical reverse engineering study of a small single-cylinder internal combustion engine (Honda/snowblower, I1, 200–300cc). The teardown evaluated subsystem interactions including carburetion, piston-crank kinematics, valve timing, and thermal/fluid management.",
+    systemStudied: "• Reverse engineered a small single-cylinder internal combustion engine\n• Examined the carburetor, intake/exhaust path, piston-cylinder assembly, crankshaft, valves, and ignition-related components\n• Identified how fuel, air, compression, spark, and mechanical motion interact to produce engine output",
+    method: "• Fully disassembled the engine into major subsystems and individual components\n• Inspected each part's geometry, material, function, and connection to surrounding components\n• Traced the fuel-air flow path through the carburetor and the mechanical power path from piston to crankshaft\n• Documented component layout, wear points, tolerances, and assembly order during teardown",
+    findings: "• The carburetor controls fuel-air mixing before combustion, directly affecting engine start-up and performance\n• The piston, connecting rod, and crankshaft convert linear combustion force into rotational output\n• Valve timing, sealing, and compression are critical to efficient combustion and power generation\n• The engine relies on tightly integrated mechanical, thermal, and fluid systems despite its compact size",
+    sectionImages: ["", "", ""]
   },
   {
     id: "rev2",
     category: "reverseEngineering",
-    visualLabel: "AUTOMOTIVE SYSTEMS",
+    visualLabel: "SUPERBIKE ENGINE",
     typeLabel: "CASE STUDY",
-    title: "Hydraulic Disc Brake Caliper: FEA & Hydraulic Pressure Limits",
-    shortDescription: "Analyzed a double-piston motorcycle brake caliper to study clamp forces, pressure distribution, and structural stress under extreme braking loads.",
+    title: "Ducati Testastretta Evoluzione Engine",
+    shortDescription: "Teardown analysis of a 1098cc V-twin Ducati Testastretta Evoluzione engine, evaluating top-end combustion architecture, desmodromic valve actuation, and assembly constraints.",
     bullets: [
-      "Digitized caliper body geometry and piston bores in CAD.",
-      "Simulated fluid pressure load distributions on internal cylinder walls.",
-      "Identified yield stress regions and proposed body casting improvements."
+      "Disassembled top-end components of a 1098cc V-twin Ducati high-performance engine.",
+      "Analyzed desmodromic mechanical cam/rocker valve actuation and piston-cylinder interfaces.",
+      "Evaluated assembly constraints and sealing interfaces in compact motorcycle engines."
     ],
-    tags: ["FEA Analysis", "Automotive Design", "Hydraulics"],
-    gradientColors: ["#a855f7", "#ec4899"], // Purple to Pink
-    detailDescription: "An engineering analysis of an automotive component. Reconstructs fluid-structure interactions to evaluate safety factors, deformation, and clamping force distribution under maximum hydraulic pressures.",
-    systemStudied: "Dual-piston hydraulic disc brake caliper system from a standard light motorcycle.",
-    method: "Measured and modeled caliper components. Conducted Finite Element Analysis (FEA) under a maximum line pressure of 10 MPa (simulating panic braking) to examine deformation, stress concentration, and pad wear trends.",
-    findings: "Discovered stress concentrations exceeding 210 MPa at the bridge radius. Recommended a radius increase from 2mm to 4.5mm in the casting, reducing peak stress by 28% and preventing potential material fatigue cracks.",
-    sectionImages: ["", "", ""] // Placeholders demo
+    tags: ["V-Twin Engine", "Desmodromic Valves", "Teardown", "Motorcycle Tech", "Combustion"],
+    gradientColors: ["#a855f7", "#ec4899"],
+    detailDescription: "A reverse engineering case study of the 1098cc Ducati Testastretta Evoluzione V-twin motorcycle engine. The teardown focused on top-end mechanical architecture, piston and cylinder geometry, desmodromic mechanical valve actuation, and real-world assembly and sealing constraints.",
+    systemStudied: "• Ducati Testastretta Evoluzione 1098 cc V-twin engine architecture\n• Piston, cylinder, cylinder head, combustion chamber, and sealing interfaces\n• External engine layout and accessible internal components after partial disassembly",
+    method: "• Disassembled accessible engine covers, cylinders, and top-end components\n• Inspected piston geometry, cylinder condition, combustion surfaces, and component interfaces\n• Documented assembly constraints caused by silicone-sealed components that limited access to the lower mechanical system",
+    findings: "• Piston and cylinder design showed how combustion forces are transferred into reciprocating motion\n• Silicone-sealed interfaces limited access to the lower crankcase and deeper mechanical systems without risking damage\n• Valve actuation used mechanical cam/rocker geometry to control valve movement rather than relying on traditional valve springs alone\n• Most analysis focused on the top-end combustion system, including pistons, cylinders, valves, and sealing interfaces",
+    sectionImages: ["", "", ""]
+  },
+  {
+    id: "rev3",
+    category: "reverseEngineering",
+    visualLabel: "AUTOMOTIVE BODY",
+    typeLabel: "CASE STUDY",
+    title: "Automotive Body",
+    shortDescription: "Disassembly and structural analysis of a 2016 Lexus RX 350 body system, investigating panel alignment, fastening interfaces, and modular crash structures.",
+    bullets: [
+      "Disassembled doors, front-end assembly, and body panels on a 2016 Lexus RX 350.",
+      "Analyzed fastener mix, bracket hinges, and mounting geometries controlling panel gaps.",
+      "Evaluated modular front-end layout for serviceability, repair access, and crash load management."
+    ],
+    tags: ["Automotive Body", "Vehicle Teardown", "Fastening Systems", "Modular Assembly", "Crash Design"],
+    gradientColors: ["#10b981", "#06b6d4"],
+    detailDescription: "A reverse engineering case study examining the exterior body structure, panel alignment mechanisms, and chassis mounting interfaces of a 2016 Lexus RX 350. The study evaluated fastening systems, modular front-end assembly, serviceability, and crash/load distribution features.",
+    systemStudied: "• Vehicle exterior body panels, doors, front-end assembly, and structural mounting points\n• Fasteners, brackets, hinges, clips, and panel alignment features\n• How removable body components connect to the frame/chassis",
+    method: "• Disassembled major exterior components including doors, front body panels, and front-end hardware\n• Documented fastening locations, assembly order, and component interfaces\n• Examined how panels are supported, aligned, and attached during vehicle assembly",
+    findings: "• Body panels rely on a mix of bolts, clips, brackets, and hinges for secure but serviceable assembly\n• Panel gaps and alignment are controlled by mounting geometry and fastening points\n• The front-end structure is designed for modular removal, repair access, and crash/load management",
+    sectionImages: ["", "", ""]
   }
 ];
