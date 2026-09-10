@@ -134,7 +134,7 @@ export const portfolioItems: PortfolioItem[] = [
     systemStudied: "• Ducati Testastretta Evoluzione 1098 cc V-twin engine architecture\n• Piston, cylinder, cylinder head, combustion chamber, and sealing interfaces\n• External engine layout and accessible internal components after partial disassembly",
     method: "• Disassembled accessible engine covers, cylinders, and top-end components\n• Inspected piston geometry, cylinder condition, combustion surfaces, and component interfaces\n• Documented assembly constraints caused by silicone-sealed components that limited access to the lower mechanical system",
     findings: "• Piston and cylinder design showed how combustion forces are transferred into reciprocating motion\n• Silicone-sealed interfaces limited access to the lower crankcase and deeper mechanical systems without risking damage\n• Valve actuation used mechanical cam/rocker geometry to control valve movement rather than relying on traditional valve springs alone\n• Most analysis focused on the top-end combustion system, including pistons, cylinders, valves, and sealing interfaces",
-    sectionImages: ["", "", ""]
+    sectionImages: ["/ducati_engine_system.jpg", "/ducati_engine_method.jpg", "/ducati_engine_findings.jpg"]
   },
   {
     id: "rev3",
