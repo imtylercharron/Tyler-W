@@ -154,6 +154,6 @@ export const portfolioItems: PortfolioItem[] = [
     systemStudied: "• Vehicle exterior body panels, doors, front-end assembly, and structural mounting points\n• Fasteners, brackets, hinges, clips, and panel alignment features\n• How removable body components connect to the frame/chassis",
     method: "• Disassembled major exterior components including doors, front body panels, and front-end hardware\n• Documented fastening locations, assembly order, and component interfaces\n• Examined how panels are supported, aligned, and attached during vehicle assembly",
     findings: "• Body panels rely on a mix of bolts, clips, brackets, and hinges for secure but serviceable assembly\n• Panel gaps and alignment are controlled by mounting geometry and fastening points\n• The front-end structure is designed for modular removal, repair access, and crash/load management",
-    sectionImages: ["", "", ""]
+    sectionImages: ["/auto_body_system.jpg", "/auto_body_method.jpg", "/auto_body_findings.jpg"]
   }
 ];
