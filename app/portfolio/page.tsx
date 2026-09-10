@@ -263,16 +263,6 @@ export default function PortfolioPage() {
                 <X size={22} />
               </button>
 
-              {/* Modal visual banner */}
-              <div
-                className={s.modalVisual}
-                style={{
-                  background: `linear-gradient(135deg, ${selectedItem.gradientColors[0]} 0%, ${selectedItem.gradientColors[1]} 100%)`
-                }}
-              >
-                <div className={s.modalVisualOutline} />
-              </div>
-
               {/* Modal Main Content */}
               <div className={s.modalContent}>
                 <div className={s.modalMeta}>
