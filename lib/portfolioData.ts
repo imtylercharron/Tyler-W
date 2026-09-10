@@ -79,42 +79,22 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "team1",
     category: "designTeams",
-    visualLabel: "SOLAR CAR",
-    typeLabel: "TEAM PROJECT",
-    title: "Midnight Sun Solar Car: Sponsorship, Wrap, and Competition Prep",
-    shortDescription: "Supported a student solar-car team through sponsorship outreach, branding, logistics, wrap/decal planning, battery-related work, and cross-subteam coordination.",
+    visualLabel: "AUTOMATION",
+    typeLabel: "DESIGN TEAM",
+    title: "Waterloo Automation Collective",
+    shortDescription: "Designed high-load mechanisms, motor mounts, and power transmission assemblies including a toggle-clamp linkage producing 97kN of clamping force.",
     bullets: [
-      "Built sponsor-facing communication materials and outreach workflow.",
-      "Coordinated visual branding, decals, merch, and vehicle presentation.",
-      "Balanced engineering constraints with public-facing design decisions."
+      "Fabricated a toggle-clamp linkage delivering up to 97kN (10 tons) of clamping force with 28.6:1 mechanical advantage.",
+      "Manufactured and assembled motor mount and belt-drive system with precise shaft alignment.",
+      "Applied DFMA principles to produce compact drive assemblies under tight packaging constraints."
     ],
-    tags: ["Project Management", "Solar Car", "CAD"],
-    gradientColors: ["#f97316", "#0d9488"], // Orange to Teal
-    detailDescription: "Active participant in the student solar car design team, coordinating branding, technical decals, sponsorship resources, and cross-functional design tasks to prepare the solar vehicle for collegiate competition.",
-    team: "Midnight Sun Solar Car (University of Ottawa Student Design Team)",
-    role: "Sponsorship Coordinator & Creative Design Liaison",
-    impact: "Secured over $15,000 in cash and material sponsorships. Developed the high-contrast aerodynamic wrap design that improved team visibility and won praises during the Formula Sun Grand Prix tech inspection.",
-    sectionImages: ["/avatar.png", "/cotton_candy_city.png", "/huge_plane_left_cutoff_cotton_candy.png"] // Demo images
-  },
-  {
-    id: "team2",
-    category: "designTeams",
-    visualLabel: "ROBOTICS CLUB",
-    typeLabel: "TEAM PROJECT",
-    title: "Mars Rover Student Team: Robotic Arm Joint & Control Integration",
-    shortDescription: "Collaborated on the development of a 6-DOF robotic manipulator arm for soil sampling and tool operations at the University Rover Challenge.",
-    bullets: [
-      "Designed high-torque planetary gearbox mounts for elbow and wrist joints.",
-      "Conducted load analysis and selected brushless motors and encoders.",
-      "Coordinated with software team to map inverse kinematics to physical actuators."
-    ],
-    tags: ["Gear Design", "Mechatronics", "SolidWorks", "Joint Analysis"],
-    gradientColors: ["#ef4444", "#f97316"], // Red to Orange
-    detailDescription: "Worked as a mechanical member of the student Mars Rover team. Focused on upgrading the robotic manipulator arm to perform precision operations like typing on a keyboard, flipping switches, and collecting soil cores.",
-    team: "uOttawa Mars Rover Student Team",
-    role: "Mechanical Design Member — Robotic Subteam",
-    impact: "Designed a lightweight joint layout reducing robotic arm weight by 14% while increasing payload lift capacity from 2.0kg to 3.5kg, leading to a top-10 finish in the robotic arm task.",
-    sectionImages: ["", "", ""] // Placeholders demo
+    tags: ["Automation", "DFMA", "Linkage Design", "Belt Drives", "Machining", "SolidWorks"],
+    gradientColors: ["#0284c7", "#3b82f6"],
+    detailDescription: "Mechanical member of the Waterloo Automation Collective design team, focusing on automated machinery, high-load power transmission assemblies, DFMA-driven prototyping, and precision linkage design.",
+    team: "• Develop mechanical systems for automated machinery and manufacturing applications\n• Design high-load mechanisms, power transmission assemblies, and supporting structures\n• Prototype and fabricate components with consideration for manufacturability, packaging, and assembly",
+    role: "• Fabricated a toggle-clamp linkage capable of producing up to 97kN (10 tons) of clamping force\n• Used a 28.6:1 mechanical advantage to amplify lead-screw input through the linkage\n• Manufactured and assembled the motor mount and belt-drive system\n• Integrated shaft alignment, pulley placement, bearing support, belt tensioning, and component clearances",
+    impact: "• Enabled high clamping forces while minimizing required lead-screw input\n• Produced a compact drive assembly within tight mechanical packaging constraints\n• Improved load transfer and motion reliability through proper shaft, bearing, and pulley alignment\n• Applied DFMA principles to transition mechanical concepts into functional hardware",
+    sectionImages: ["", "", ""]
   },
   {
     id: "rev1",

@@ -212,14 +212,6 @@ export default function PortfolioPage() {
                   <h2 className={s.cardTitle}>{item.title}</h2>
                   <p className={s.cardDesc}>{item.shortDescription}</p>
 
-                  <ul className={s.cardBullets}>
-                    {item.bullets.map((bullet, idx) => (
-                      <li key={idx} className={s.cardBulletItem}>
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-
                   <div className={s.cardTags}>
                     {item.tags.map((tag) => (
                       <span key={tag} className={s.cardTag}>
