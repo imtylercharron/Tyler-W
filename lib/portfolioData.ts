@@ -74,7 +74,7 @@ export const portfolioItems: PortfolioItem[] = [
     what: "• Designed a compact 5-speed manual transmission driven by a 12V, 100RPM geared motor\n• Developed five spur-gear ratios from 3.00:1 to 0.74:1 with a sliding dog-clutch shifting system\n• Built around PETG gears, steel shafts, and ball bearings",
     how: "• Calculated gear ratios, tooth forces, bending stress, torque capacity, and clutch loading to size the drivetrain\n• 3D printed and iterated PETG gears, adjusting dimensions and tolerances based on physical fit testing\n• Machined 3/8-in cold-worked steel shafts down to 8mm on a lathe for interference-fit 608 bearings and designed custom shaft supports",
     results: "• Produced and tested the full 5-speed gearset through multiple design iterations\n• Achieved press-fit bearing interfaces while refining gear mesh, shaft alignment, and clutch clearances\n• Identified and corrected real-world manufacturing/tolerance issues, moving the design toward final assembly",
-    sectionImages: ["/placeholder.png", "/placeholder.png", "/placeholder.png"]
+    sectionImages: ["/manual_transmission_what.png", "/manual_transmission_how.png", "/manual_transmission_results.png"]
   },
   {
     id: "team1",
@@ -94,7 +94,7 @@ export const portfolioItems: PortfolioItem[] = [
     team: "• Develop mechanical systems for automated machinery and manufacturing applications\n• Design high-load mechanisms, power transmission assemblies, and supporting structures\n• Prototype and fabricate components with consideration for manufacturability, packaging, and assembly",
     role: "• Fabricated a toggle-clamp linkage capable of producing up to 97kN (10 tons) of clamping force\n• Used a 28.6:1 mechanical advantage to amplify lead-screw input through the linkage\n• Manufactured and assembled the motor mount and belt-drive system\n• Integrated shaft alignment, pulley placement, bearing support, belt tensioning, and component clearances",
     impact: "• Enabled high clamping forces while minimizing required lead-screw input\n• Produced a compact drive assembly within tight mechanical packaging constraints\n• Improved load transfer and motion reliability through proper shaft, bearing, and pulley alignment\n• Applied DFMA principles to transition mechanical concepts into functional hardware",
-    sectionImages: ["/placeholder.png", "/placeholder.png", "/placeholder.png"]
+    sectionImages: ["/automation_team_1.png", "/automation_team_2.png", "/automation_team_3.png"]
   },
   {
     id: "rev1",
