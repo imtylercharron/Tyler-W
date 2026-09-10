@@ -6,8 +6,9 @@ import s from "./resume.module.css";
 import { Download } from "lucide-react";
 
 export default function ResumePage() {
-  // Path to the resume file in the public folder
+  // Path to the resume files in the public folder
   const resumePath = "/Tyler%20Charron's%20Resume.pdf";
+  const resumePreviewPath = "/resume_preview.png";
 
   return (
     <main className={s.main}>
@@ -19,10 +20,10 @@ export default function ResumePage() {
         </header>
 
         <div className={s.resumeContainer}>
-          <iframe 
-            src={`${resumePath}#view=FitH&toolbar=0&navpanes=0`} 
-            className={s.pdfViewer} 
-            title="Tyler Charron Resume"
+          <img 
+            src={resumePreviewPath} 
+            alt="Tyler Charron Resume" 
+            className={s.resumeImage}
           />
         </div>
 
