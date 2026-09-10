@@ -54,7 +54,7 @@ export const portfolioItems: PortfolioItem[] = [
     what: "• Designed an autonomous line-following robot with an active self-leveling platform for stable object transport\n• Required real-time correction of platform tilt while maintaining line-tracking accuracy\n• Implemented object detection to stop the robot before collisions during autonomous operation",
     how: "• Designed a compact 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD\n• Integrated brightness, distance, and gyroscope sensors into a closed-loop control system\n• Tuned PID control for both self-leveling and line-following to improve stability, tracking accuracy, and response time\n• Calibrated sensor thresholds through repeated testing under different surface and lighting conditions",
     results: "• Maintained platform stability within ±3° during steady-state motion with a 1 kg payload\n• Achieved continuous line following with less than 2.5 cm deviation from the robot centerline\n• Reached a maximum speed of 0.4 m/s while maintaining stable tracking and leveling\n• Reduced unnecessary material use and print time by optimizing component geometry and part placement",
-    sectionImages: ["", "", ""]
+    sectionImages: ["/self_levelling_robot_what.jpg", "/self_levelling_robot_how.png", "/self_levelling_robot_results.png"]
   },
   {
     id: "proj2",
