@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import s from './Navbar.module.css';
@@ -35,24 +36,26 @@ export default function Navbar() {
     <>
       <nav className={`${s.navbar} ${scrolled ? s.scrolled : ''}`}>
         <div className={s.logoContainer}>
-          <Image src="/logo.png" alt="Tyler Charron Logo" width={40} height={40} className={s.logoImage} />
-          <span className={s.name}>Tyler Charron</span>
+          <Link href="/" onClick={closeMenu} className={s.logoLink}>
+            <Image src="/logo.png" alt="Tyler Charron Logo" width={40} height={40} className={s.logoImage} />
+            <span className={s.name}>Tyler Charron</span>
+          </Link>
         </div>
         
         <div className={`${s.navLinks} ${mobileMenuOpen ? s.open : ''}`}>
-          <button className={s.mobileCloseBtn} onClick={closeMenu}>
+          <button className={s.mobileCloseBtn} onClick={closeMenu} aria-label="Close menu">
             <X size={24} />
           </button>
-          <a href="/#home" className={s.navLink} onClick={closeMenu}>Home</a>
-          <a href="/portfolio" className={s.navLink} onClick={closeMenu}>Portfolio</a>
-          <a href="/resume" className={s.navLink} onClick={closeMenu}>Resume</a>
-          <a href="/#about" className={s.navLink} onClick={closeMenu}>About Me</a>
-          <a href="/contactme" className={`${s.navLink} ${s.mobileOnly}`} onClick={closeMenu}>Contact Me</a>
+          <Link href="/" className={s.navLink} onClick={closeMenu}>Home</Link>
+          <Link href="/portfolio" className={s.navLink} onClick={closeMenu}>Portfolio</Link>
+          <Link href="/resume" className={s.navLink} onClick={closeMenu}>Resume</Link>
+          <Link href="/#about" className={s.navLink} onClick={closeMenu}>About Me</Link>
+          <Link href="/contactme" className={`${s.navLink} ${s.mobileOnly}`} onClick={closeMenu}>Contact Me</Link>
         </div>
         
         <div className={s.rightSection}>
-          <a href="/contactme" className={s.contactBtn}>Contact Me</a>
-          <button className={s.hamburger} onClick={() => setMobileMenuOpen(true)}>
+          <Link href="/contactme" className={s.contactBtn}>Contact Me</Link>
+          <button className={s.hamburger} onClick={() => setMobileMenuOpen(true)} aria-label="Open menu">
             <Menu size={24} />
           </button>
         </div>
