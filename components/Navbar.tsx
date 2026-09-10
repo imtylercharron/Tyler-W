@@ -19,6 +19,18 @@ export default function Navbar() {
 
   const closeMenu = () => setMobileMenuOpen(false);
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <>
       <nav className={`${s.navbar} ${scrolled ? s.scrolled : ''}`}>
