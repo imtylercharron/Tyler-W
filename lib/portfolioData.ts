@@ -114,7 +114,7 @@ export const portfolioItems: PortfolioItem[] = [
     systemStudied: "• Reverse engineered a small single-cylinder internal combustion engine\n• Examined the carburetor, intake/exhaust path, piston-cylinder assembly, crankshaft, valves, and ignition-related components\n• Identified how fuel, air, compression, spark, and mechanical motion interact to produce engine output",
     method: "• Fully disassembled the engine into major subsystems and individual components\n• Inspected each part's geometry, material, function, and connection to surrounding components\n• Traced the fuel-air flow path through the carburetor and the mechanical power path from piston to crankshaft\n• Documented component layout, wear points, tolerances, and assembly order during teardown",
     findings: "• The carburetor controls fuel-air mixing before combustion, directly affecting engine start-up and performance\n• The piston, connecting rod, and crankshaft convert linear combustion force into rotational output\n• Valve timing, sealing, and compression are critical to efficient combustion and power generation\n• The engine relies on tightly integrated mechanical, thermal, and fluid systems despite its compact size",
-    sectionImages: ["", "", ""]
+    sectionImages: ["/ic_engine_system.jpg", "/ic_engine_method.jpg", "/ic_engine_findings.jpg"]
   },
   {
     id: "rev2",
