@@ -7,7 +7,7 @@ import { Download } from "lucide-react";
 
 export default function ResumePage() {
   // Path to the resume files in the public folder
-  const resumePath = "/Tyler%20Charron's%20Resume.pdf";
+  const resumePath = "/Tyler_Charron_Resume.pdf";
   const resumePreviewPath = "/resume_preview.png";
 
   return (
@@ -27,7 +27,13 @@ export default function ResumePage() {
           />
         </div>
 
-        <a href={resumePath} download className={s.downloadBtn}>
+        <a 
+          href={resumePath} 
+          download="Tyler_Charron_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={s.downloadBtn}
+        >
           <Download size={20} />
           DOWNLOAD PDF
         </a>
