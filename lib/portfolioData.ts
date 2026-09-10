@@ -59,22 +59,22 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "proj2",
     category: "projects",
-    visualLabel: "CAD DESIGN",
+    visualLabel: "DRIVETRAIN",
     typeLabel: "PERSONAL PROJECT",
-    title: "Eco-Friendly Water Filtration System: Structural Optimization",
-    shortDescription: "Designed and optimized a low-cost, portable gravity-fed water filtration unit intended for humanitarian use in remote communities.",
+    title: "Compact Manual Transmission",
+    shortDescription: "Designed, built, and tested a compact 5-speed manual transmission driven by a 12V, 100RPM motor, featuring PETG gears, lathe-machined steel shafts, and sliding dog-clutch shifting.",
     bullets: [
-      "Modeled all structural and functional filter components in SolidWorks.",
-      "Conducted finite element analysis (FEA) to minimize material usage while keeping strength.",
-      "Simulated flow rates through variable-porosity filtering media."
+      "Developed five spur-gear ratios from 3.00:1 to 0.74:1 with a sliding dog-clutch shifting system.",
+      "Calculated tooth forces, bending stress, torque capacity, and clutch loading to size drivetrain.",
+      "Machined 3/8-in steel shafts on a lathe for interference-fit 608 bearings with PETG gears."
     ],
-    tags: ["SolidWorks", "FEA", "Flow Simulation", "Sustainability"],
-    gradientColors: ["#10b981", "#06b6d4"], // Emerald to Cyan
-    detailDescription: "This project addresses global water accessibility by designing a portable filtration system. SolidWorks simulation was used to analyze fluid flow and structural loads under varying water heights.",
-    what: "A modular, easy-to-clean water filtration system using locally-sourced sand, charcoal, and ceramic filters to supply clean drinking water.",
-    how: "Developed the CAD assembly focusing on modular threads and snaps for toolless assembly. Ran FEA stress tests on shell walls to withstand hydrostatic pressures and optimized wall thicknesses.",
-    results: "Reduced overall plastic material volume by 18% while maintaining a safety factor of 2.2, with a calculated flow rate of 4.5 liters per hour.",
-    sectionImages: ["", "", ""] // Placeholders demo
+    tags: ["Drivetrain", "3D Printing", "Lathe Machining", "Gear Analysis", "CAD Design"],
+    gradientColors: ["#0284c7", "#2563eb"],
+    detailDescription: "A personal mechanical engineering project focused on the end-to-end design, sizing, machining, and physical testing of a compact 5-speed manual transmission. The drivetrain converts input power from a 12V 100RPM motor through custom gear ratios and sliding dog-clutch engagement.",
+    what: "• Designed a compact 5-speed manual transmission driven by a 12V, 100RPM geared motor\n• Developed five spur-gear ratios from 3.00:1 to 0.74:1 with a sliding dog-clutch shifting system\n• Built around PETG gears, steel shafts, and ball bearings",
+    how: "• Calculated gear ratios, tooth forces, bending stress, torque capacity, and clutch loading to size the drivetrain\n• 3D printed and iterated PETG gears, adjusting dimensions and tolerances based on physical fit testing\n• Machined 3/8-in cold-worked steel shafts down to 8mm on a lathe for interference-fit 608 bearings and designed custom shaft supports",
+    results: "• Produced and tested the full 5-speed gearset through multiple design iterations\n• Achieved press-fit bearing interfaces while refining gear mesh, shaft alignment, and clutch clearances\n• Identified and corrected real-world manufacturing/tolerance issues, moving the design toward final assembly",
+    sectionImages: ["", "", ""]
   },
   {
     id: "team1",
