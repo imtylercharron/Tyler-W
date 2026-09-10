@@ -194,14 +194,27 @@ export default function PortfolioPage() {
                   }
                 }}
               >
-                {/* Visual Top Section with Gradient and Inner Outline */}
+                {/* Visual Top Section with Image or Gradient */}
                 <div
                   className={s.cardVisual}
                   style={{
-                    background: `linear-gradient(135deg, ${item.gradientColors[0]} 0%, ${item.gradientColors[1]} 100%)`
+                    background: (item.coverImage || item.sectionImages?.[0])
+                      ? '#0c1416'
+                      : `linear-gradient(135deg, ${item.gradientColors[0]} 0%, ${item.gradientColors[1]} 100%)`
                   }}
                 >
-                  <div className={s.cardVisualOutline} />
+                  {(item.coverImage || item.sectionImages?.[0]) ? (
+                    <>
+                      <img
+                        src={item.coverImage || item.sectionImages?.[0]}
+                        alt={item.title}
+                        className={s.cardCoverImage}
+                      />
+                      <div className={s.cardVisualOverlay} />
+                    </>
+                  ) : (
+                    <div className={s.cardVisualOutline} />
+                  )}
                 </div>
 
                 {/* Card Info Area */}

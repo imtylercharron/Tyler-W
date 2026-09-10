@@ -9,6 +9,7 @@ export interface BasePortfolioItem {
   tags: string[];
   gradientColors: string[]; // e.g. ['#f97316', '#0d9488']
   detailDescription: string;
+  coverImage?: string; // Featured card image
   sectionImages?: string[]; // Array of exactly 3 image paths matching the 3 custom sections
 }
 
@@ -54,6 +55,7 @@ export const portfolioItems: PortfolioItem[] = [
     what: "• Designed an autonomous line-following robot with an active self-leveling platform for stable object transport\n• Required real-time correction of platform tilt while maintaining line-tracking accuracy\n• Implemented object detection to stop the robot before collisions during autonomous operation",
     how: "• Designed a compact 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD\n• Integrated brightness, distance, and gyroscope sensors into a closed-loop control system\n• Tuned PID control for both self-leveling and line-following to improve stability, tracking accuracy, and response time\n• Calibrated sensor thresholds through repeated testing under different surface and lighting conditions",
     results: "• Maintained platform stability within ±3° during steady-state motion with a 1 kg payload\n• Achieved continuous line following with less than 2.5 cm deviation from the robot centerline\n• Reached a maximum speed of 0.4 m/s while maintaining stable tracking and leveling\n• Reduced unnecessary material use and print time by optimizing component geometry and part placement",
+    coverImage: "/self_levelling_robot_what.jpg",
     sectionImages: ["/self_levelling_robot_what.jpg", "/self_levelling_robot_how.png", "/self_levelling_robot_results.png"]
   },
   {
@@ -74,6 +76,7 @@ export const portfolioItems: PortfolioItem[] = [
     what: "• Designed a compact 5-speed manual transmission driven by a 12V, 100RPM geared motor\n• Developed five spur-gear ratios from 3.00:1 to 0.74:1 with a sliding dog-clutch shifting system\n• Built around PETG gears, steel shafts, and ball bearings",
     how: "• Calculated gear ratios, tooth forces, bending stress, torque capacity, and clutch loading to size the drivetrain\n• 3D printed and iterated PETG gears, adjusting dimensions and tolerances based on physical fit testing\n• Machined 3/8-in cold-worked steel shafts down to 8mm on a lathe for interference-fit 608 bearings and designed custom shaft supports",
     results: "• Produced and tested the full 5-speed gearset through multiple design iterations\n• Achieved press-fit bearing interfaces while refining gear mesh, shaft alignment, and clutch clearances\n• Identified and corrected real-world manufacturing/tolerance issues, moving the design toward final assembly",
+    coverImage: "/manual_transmission_what.png",
     sectionImages: ["/manual_transmission_what.png", "/manual_transmission_how.png", "/manual_transmission_results.png"]
   },
   {
@@ -94,6 +97,7 @@ export const portfolioItems: PortfolioItem[] = [
     team: "• Develop mechanical systems for automated machinery and manufacturing applications\n• Design high-load mechanisms, power transmission assemblies, and supporting structures\n• Prototype and fabricate components with consideration for manufacturability, packaging, and assembly",
     role: "• Fabricated a toggle-clamp linkage capable of producing up to 97kN (10 tons) of clamping force\n• Used a 28.6:1 mechanical advantage to amplify lead-screw input through the linkage\n• Manufactured and assembled the motor mount and belt-drive system\n• Integrated shaft alignment, pulley placement, bearing support, belt tensioning, and component clearances",
     impact: "• Enabled high clamping forces while minimizing required lead-screw input\n• Produced a compact drive assembly within tight mechanical packaging constraints\n• Improved load transfer and motion reliability through proper shaft, bearing, and pulley alignment\n• Applied DFMA principles to transition mechanical concepts into functional hardware",
+    coverImage: "/automation_team_1.png",
     sectionImages: ["/automation_team_1.png", "/automation_team_2.png", "/automation_team_3.png"]
   },
   {
@@ -114,6 +118,7 @@ export const portfolioItems: PortfolioItem[] = [
     systemStudied: "• Reverse engineered a small single-cylinder internal combustion engine\n• Examined the carburetor, intake/exhaust path, piston-cylinder assembly, crankshaft, valves, and ignition-related components\n• Identified how fuel, air, compression, spark, and mechanical motion interact to produce engine output",
     method: "• Fully disassembled the engine into major subsystems and individual components\n• Inspected each part's geometry, material, function, and connection to surrounding components\n• Traced the fuel-air flow path through the carburetor and the mechanical power path from piston to crankshaft\n• Documented component layout, wear points, tolerances, and assembly order during teardown",
     findings: "• The carburetor controls fuel-air mixing before combustion, directly affecting engine start-up and performance\n• The piston, connecting rod, and crankshaft convert linear combustion force into rotational output\n• Valve timing, sealing, and compression are critical to efficient combustion and power generation\n• The engine relies on tightly integrated mechanical, thermal, and fluid systems despite its compact size",
+    coverImage: "/ic_engine_system.jpg",
     sectionImages: ["/ic_engine_system.jpg", "/ic_engine_method.jpg", "/ic_engine_findings.jpg"]
   },
   {
@@ -134,6 +139,7 @@ export const portfolioItems: PortfolioItem[] = [
     systemStudied: "• Ducati Testastretta Evoluzione 1098 cc V-twin engine architecture\n• Piston, cylinder, cylinder head, combustion chamber, and sealing interfaces\n• External engine layout and accessible internal components after partial disassembly",
     method: "• Disassembled accessible engine covers, cylinders, and top-end components\n• Inspected piston geometry, cylinder condition, combustion surfaces, and component interfaces\n• Documented assembly constraints caused by silicone-sealed components that limited access to the lower mechanical system",
     findings: "• Piston and cylinder design showed how combustion forces are transferred into reciprocating motion\n• Silicone-sealed interfaces limited access to the lower crankcase and deeper mechanical systems without risking damage\n• Valve actuation used mechanical cam/rocker geometry to control valve movement rather than relying on traditional valve springs alone\n• Most analysis focused on the top-end combustion system, including pistons, cylinders, valves, and sealing interfaces",
+    coverImage: "/ducati_engine_system.jpg",
     sectionImages: ["/ducati_engine_system.jpg", "/ducati_engine_method.jpg", "/ducati_engine_findings.jpg"]
   },
   {
@@ -154,6 +160,7 @@ export const portfolioItems: PortfolioItem[] = [
     systemStudied: "• Vehicle exterior body panels, doors, front-end assembly, and structural mounting points\n• Fasteners, brackets, hinges, clips, and panel alignment features\n• How removable body components connect to the frame/chassis",
     method: "• Disassembled major exterior components including doors, front body panels, and front-end hardware\n• Documented fastening locations, assembly order, and component interfaces\n• Examined how panels are supported, aligned, and attached during vehicle assembly",
     findings: "• Body panels rely on a mix of bolts, clips, brackets, and hinges for secure but serviceable assembly\n• Panel gaps and alignment are controlled by mounting geometry and fastening points\n• The front-end structure is designed for modular removal, repair access, and crash/load management",
+    coverImage: "/auto_body_system.jpg",
     sectionImages: ["/auto_body_system.jpg", "/auto_body_method.jpg", "/auto_body_findings.jpg"]
   }
 ];
