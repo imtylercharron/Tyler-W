@@ -38,27 +38,6 @@ export type PortfolioItem = ProjectItem | DesignTeamItem | ReverseEngineeringIte
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    id: "proj1",
-    category: "projects",
-    visualLabel: "ROBOTICS",
-    typeLabel: "ACADEMIC PROJECT",
-    title: "Self-Levelling Line-Following Robot",
-    shortDescription: "Designed an autonomous line-following robot with an active self-leveling platform, closed-loop PID control, and collision-avoidance object detection for stable payload transport.",
-    bullets: [
-      "Designed a 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD.",
-      "Integrated brightness, distance, and gyroscope sensors into a closed-loop PID control system.",
-      "Maintained platform stability within ±3° under a 1 kg payload with line tracking deviation < 2.5 cm."
-    ],
-    tags: ["Robotics", "PID Control", "CAD Design", "Mechatronics", "3D Printing", "Sensors"],
-    gradientColors: ["#3b82f6", "#8b5cf6"],
-    detailDescription: "An ME 101 mechanical engineering design project focused on developing an autonomous line-following mobile robot equipped with an active self-leveling payload platform. The system uses closed-loop PID feedback combining gyroscope, brightness, and distance sensors to maintain stability and prevent collisions during operation.",
-    what: "• Designed an autonomous line-following robot with an active self-leveling platform for stable object transport\n• Required real-time correction of platform tilt while maintaining line-tracking accuracy\n• Implemented object detection to stop the robot before collisions during autonomous operation",
-    how: "• Designed a compact 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD\n• Integrated brightness, distance, and gyroscope sensors into a closed-loop control system\n• Tuned PID control for both self-leveling and line-following to improve stability, tracking accuracy, and response time\n• Calibrated sensor thresholds through repeated testing under different surface and lighting conditions",
-    results: "• Maintained platform stability within ±3° during steady-state motion with a 1 kg payload\n• Achieved continuous line following with less than 2.5 cm deviation from the robot centerline\n• Reached a maximum speed of 0.4 m/s while maintaining stable tracking and leveling\n• Reduced unnecessary material use and print time by optimizing component geometry and part placement",
-    coverImage: "/self_levelling_robot_what.jpg",
-    sectionImages: ["/self_levelling_robot_what.jpg", "/self_levelling_robot_how.png", "/self_levelling_robot_results.png"]
-  },
-  {
     id: "proj2",
     category: "projects",
     visualLabel: "DRIVETRAIN",
@@ -78,6 +57,27 @@ export const portfolioItems: PortfolioItem[] = [
     results: "• Produced and tested the full 5-speed gearset through multiple design iterations\n• Achieved press-fit bearing interfaces while refining gear mesh, shaft alignment, and clutch clearances\n• Identified and corrected real-world manufacturing/tolerance issues, moving the design toward final assembly",
     coverImage: "/manual_transmission_what.png",
     sectionImages: ["/manual_transmission_what.png", "/manual_transmission_how.png", "/manual_transmission_results.png"]
+  },
+  {
+    id: "proj1",
+    category: "projects",
+    visualLabel: "ROBOTICS",
+    typeLabel: "ACADEMIC PROJECT",
+    title: "Self-Levelling Line-Following Robot",
+    shortDescription: "Designed an autonomous line-following robot with an active self-leveling platform, closed-loop PID control, and collision-avoidance object detection for stable payload transport.",
+    bullets: [
+      "Designed a 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD.",
+      "Integrated brightness, distance, and gyroscope sensors into a closed-loop PID control system.",
+      "Maintained platform stability within ±3° under a 1 kg payload with line tracking deviation < 2.5 cm."
+    ],
+    tags: ["Robotics", "PID Control", "CAD Design", "Mechatronics", "3D Printing", "Sensors"],
+    gradientColors: ["#3b82f6", "#8b5cf6"],
+    detailDescription: "An ME 101 mechanical engineering design project focused on developing an autonomous line-following mobile robot equipped with an active self-leveling payload platform. The system uses closed-loop PID feedback combining gyroscope, brightness, and distance sensors to maintain stability and prevent collisions during operation.",
+    what: "• Designed an autonomous line-following robot with an active self-leveling platform for stable object transport\n• Required real-time correction of platform tilt while maintaining line-tracking accuracy\n• Implemented object detection to stop the robot before collisions during autonomous operation",
+    how: "• Designed a compact 3D-printed PLA chassis, motor housing, rail mechanism, and stabilization platform in CAD\n• Integrated brightness, distance, and gyroscope sensors into a closed-loop control system\n• Tuned PID control for both self-leveling and line-following to improve stability, tracking accuracy, and response time\n• Calibrated sensor thresholds through repeated testing under different surface and lighting conditions",
+    results: "• Maintained platform stability within ±3° during steady-state motion with a 1 kg payload\n• Achieved continuous line following with less than 2.5 cm deviation from the robot centerline\n• Reached a maximum speed of 0.4 m/s while maintaining stable tracking and leveling\n• Reduced unnecessary material use and print time by optimizing component geometry and part placement",
+    coverImage: "/self_levelling_robot_what.jpg",
+    sectionImages: ["/self_levelling_robot_what.jpg", "/self_levelling_robot_how.png", "/self_levelling_robot_results.png"]
   },
   {
     id: "team1",
